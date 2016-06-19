@@ -45,9 +45,3 @@ At the end of the day, if you are using any wireless tech whatsoever, you are tr
 
 No. The gateways simply listen for radio signals from nodes and pass encrypted data to the network. Gateways do not contain decryption keys or any privileged information about users.
 
-## Legal
-
-### As an operator of a gateway, am I liable for the use of the gateway by "bad actors"?
-
---
-
