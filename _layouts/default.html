@@ -82,7 +82,17 @@ title: TheThingsNetwork NYC
     <a href="http://www.meetup.com/The-Things-Network-NYC-Community-Meetup/join" class="btn btn-dark btn-lg">Join Us!</a>
     {% endif %}
 
-    {{ content }}
+    {% if page.wrap %}
+      <section class="content-section bg-primary text-white text-center" id="projects">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 text-left">
+            {{ content }}
+          </div>
+        </div>
+      </section>
+    {% else %}
+      {{ content }}
+    {% endif %}
 
     <div class="container">
       <div class="row">
