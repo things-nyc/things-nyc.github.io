@@ -16,10 +16,10 @@ title: TheThingsNetwork NYC
     <title>TheThingsNetwork NYC</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link href="css/stylish-portfolio.css" type="text/css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -68,18 +68,19 @@ title: TheThingsNetwork NYC
                 <a href="/#top" onclick = $("#menu-close").click(); >Home</a>
             </li>
             <li>
-                <a href="/#about" onclick = $("#menu-close").click(); >Learn More</a>
+                <a href="/#brief" onclick = $("#menu-close").click(); >Learn More</a>
             </li>
             <li>
-                <a href="/projects" onclick = $("#menu-close").click(); >Projects</a>
+              <a href="/projects" onclick = $("#menu-close").click(); >Projects</a>
+            </li>
+            <li>
+              <a href="/faq" onclick = $("#menu-close").click(); >FAQ</a>
             </li>
         </ul>
     </nav>
 
     {% if page.url != "/" %}
-    <a href="/#about" class="btn btn-dark btn-lg">Learn More</a>
-    <a href="/projects" class="btn btn-dark btn-lg">Projects</a>
-    <a href="http://www.meetup.com/The-Things-Network-NYC-Community-Meetup/join" class="btn btn-dark btn-lg">Join Us!</a>
+      {% include menubar.html %}
     {% endif %}
 
     {% if page.wrap %}

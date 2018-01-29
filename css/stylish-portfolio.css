@@ -237,3 +237,18 @@ hr.small {
 footer {
     padding: 100px 0;
 }
+
+/* Extra */
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.bg-primary a {
+  color: white;
+}
+
+.menubar {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}

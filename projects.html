@@ -2,33 +2,36 @@
 layout: default
 title: TheThingsNetwork NYC Projects
 ---
-<section id="brief" class="brief">
+<section class="content-section bg-primary text-white text-center" id="projects">
   <div class="container">
-      <div class="row">
-          <div class="col-lg-12">
-{% for project in site.data.projects %}
-  <h2>{{ project.Title }}</h2>
-  <p>{{ project.Description }}</p>
-  <div><label>Status:</label>
-    <span>{{ project.Status }}</span></div>
-  <div><label>Next Steps:</label>
-    <span>{{ project.Nextsteps }}</span></div>
-  <div><label>Lead:</label>
-    <a href="{{ site.data.people[project.Lead].profile }}"><span>{{ site.data.people[project.Lead].name }}</span></a></div>
-  <div><label>Contributors:</label>
-    {% for person in project.Contributors %}
-    <a href="{{ site.data.people[person].profile }}"><span>{{ site.data.people[person].name }}</span></a>{% if forloop.last == false %},{% endif %}
-    {% endfor %}
+    <div class="content-section-heading">
+      <h2 class="mb-5">Team Projects</h2>
+    </div>
   </div>
-  <div><label>Repositories:</label>
-  {% for repo in project.Repositories %}
-    <a href="{{ repo }}"><span>{{ repo }}</span></a>{% if forloop.last == false %},{% endif %}
-  {% endfor %}
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 text-left">
+      {% for project in site.data.projects %}
+        <div class="col-lg-8 col-lg-offset-2 text-left">
+          <h2>{{ project.Title }}</h2>
+          <p>{{ project.Description }}</p>
+          <div><label>Status:</label>
+            <span>{{ project.Status }}</span></div>
+          <div><label>Next Steps:</label>
+            <span>{{ project.Nextsteps }}</span></div>
+          <div><label>Lead:</label>
+            <a href="{{ site.data.people[project.Lead].profile }}"><span>{{ site.data.people[project.Lead].name }}</span></a></div>
+          <!-- <div><label>Contributors:</label>
+            {% for person in project.Contributors %}
+            <a href="{{ site.data.people[person].profile }}"><span>{{ site.data.people[person].name }}</span></a>{% if forloop.last == false %},{% endif %}
+            {% endfor %}
+          </div> -->
+          <div><label>Repositories:</label>
+          {% for repo in project.Repositories %}
+            <a href="{{ repo }}"><span>{{ repo }}</span></a>{% if forloop.last == false %},{% endif %}
+          {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
   </div>
-{% endfor %}
-</div>
-</div>
-<!-- /.row -->
-</div>
-<!-- /.container -->
 </section>
