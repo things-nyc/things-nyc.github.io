@@ -1,3 +1,4 @@
+# Specific people named in site with profile link.
 terrymoore:
   name: Terry Moore
   profile: https://github.com/terrillmoore
@@ -13,6 +14,14 @@ chrismerck:
 mimiflynn:
   name: Mimi Flynn
   profile: https://github.com/mimiflynn
+
+chrisstratton:
+  name: Chris Stratton
+  profile: https://github.com/cstratton
+
+elliotthighfill:
+  name: Elliott Highfill
+  profile: https://github.com/highfile
 
 jeffhonig:
   name: Jeff Honig
