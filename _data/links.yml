@@ -1,0 +1,21 @@
+- url: https://eepurl.com/ccBERT
+  title: The Things Network New York Mailing List
+
+- url: https://www.meetup.com/The-Things-Network-NYC-Community-Meetup/
+  title: The Things Network New York Meetup Page
+
+- url: https://things-nyc.slack.com/
+  title: The Things Network New York Public Slack
+
+- url: https://github.com/things-nyc
+  title: The Things Network New York on Github
+
+- url: https://thethingsnetwork.org/
+  title: The Things Network Global Website
+
+# - url: https://thethingsnetwork.org/wiki/
+#   title: TheThingsNetwork Global Wiki
+#   disabled: true
+
+- url: https://forum.thethingsnetwork.org/
+  title: The Things Network Global Forum

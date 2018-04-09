@@ -1,0 +1,5 @@
+timezone: America/New_York
+# source: source_folder
+# collections:
+#   - projects
+remote_theme: BlackrockDigital/startbootstrap-stylish-portfolio
