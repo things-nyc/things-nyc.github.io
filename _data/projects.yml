@@ -1,0 +1,181 @@
+- Title: Outreach and Gateway Deployment
+  Lead: terrymoore
+  Type: Organization
+  Description: |
+    The fundamental purpose of the organization is to promote and support deployment of gateways throughout New York City.
+    To that end, group members take every opportunity to spread the word about
+    The Things Network and the benefits of joining an open IoT network.
+
+    Outreach includes participating in hackathon and workshop events, presenting in various technology fora,
+    and meeting with commercial, non-profit, and government organizations that might benefit from using
+    TTN. In addition, the group will recommend hardware and offer direct on-site support to people who want
+    to deploy a gateway.
+  Status: Ongoing
+  Nextsteps:
+    - More in-person hands-on make-it-work workshops.
+    - Deploy fixed rooftop gateway with large antenna in commercial building.
+    - Find foundation or commercial sponsor to kickstart gateway deployment.
+
+
+- Title: Gateway fleet management system
+  Lead: jeffhonig
+  Contributors: terrymoore
+  Type: System
+  Description: |
+    A system supporting the deployment, monitoring, and maintenance of a fleet of Multitech
+    Conduit and Conduit AP gateways.  As part of deploying hundreds of gateways to cover
+    NYC and Ithaca regions of New York State, the group plans to offer management of those
+    gateways as a service to gateway owners.  The system uses the Ansible Configuration
+    Management tool to drive gateway configuration, an SSH jumphost to enable secure remote
+    access and a monitoring tool to send alerts on gateway status changes.
+  Status: Active Development, being used to deploy gateways
+  Nextsteps:
+    - Improve robustness
+    - Continuous integration testing
+  Documentation: https://github.com/IthacaThings/ttn-multitech-cm
+  Repositories:
+    - https://github.com/IthacaThings/ttn-multitech-cm
+    - https://github.com/IthacaThings/ttn-monitor
+    - https://github.com/jchonig/mlinux-be
+    - https://github.com/IthacaThings/mlinux-images
+    - https://hub.docker.com/r/jchonig/mlinux-be/
+
+
+- Title: Organization, Presence, and Funding
+  Lead: terrymoore
+  Contributors:
+    - chrismerck
+    - forrestfiller
+    - mimiflynn
+    - frankleonrose
+    - elliotthighfill
+  Type: Organization
+  Description: |
+    TTN-NY as an organization needs legal structure, accounting, and governance.
+    It also needs to be present on the Web and social media in order to be found by people looking for
+    LoraWAN support in NYC. We just recently produced a T-Shirt design and stickers!
+  Status: Ongoing
+  Nextsteps:
+    - Complete 501(c)3 certification.
+    - Add more project documentation on the website.
+    - Enable donations by engaging a fiscal sponsor.
+    - Meeting minutes and newsletter on website.
+  Repositories:
+    - https://github.com/things-nyc/things-nyc.github.io
+    - https://github.com/things-nyc/things-nyc-docs
+
+
+- Title: Arduino LMiC Library Forks
+  Lead: terrymoore
+  Contributors: frankleonrose
+  Type: Library
+  Description: |
+    The LMiC (LoRa-Mac in C) library came from IBM and is hosted here:
+    [https://github.com/matthijskooijman/arduino-lmic](https://github.com/matthijskooijman/arduino-lmic).
+    When the team at TTN-NY first started building Arduino nodes, they discovered many missing features related to
+    operating within the US band plan. Frank made an effort to submit merge requests back upstream but Matthijs has
+    been slow to respond. Recent changes have not been converted to PRs. Terry forked the things-nyc repo and made
+    even more extensive changes to support his Catena boards, including adding all global band plans. His repo
+    is now our recommended LMiC library.
+  Status: Deprecated. The MCCI-Catena fork is our recommended building block for Arduino development with the 1276/8 chips (RFM-95).
+  Nextsteps: Document superiority of MCCI-Catena fork so that people use it first
+  Repositories:
+    - https://github.com/mcci-catena/arduino-lmic
+    - https://github.com/things-nyc/arduino-lmic
+
+
+- Title: Manhattan Mapper
+  Lead: frankleonrose
+  Contributors:
+    - mimiflynn
+  Type: Device
+  Description: |
+    The Manhattan Borough President, Gale Brewer, is a vocal advocate for building Smart City infrastructure
+    in an open way that encourages innovation. TTN-NY is building LoRa node with GPS that will be installed
+    in Gale’s primary vehicle. The Manhattan Borough President will thereby be actively participating in the
+    development of a TTN coverage map as she conducts her business around the city.
+  Status: Field Testing
+  Nextsteps:
+    - Write up build log
+    - Install in MBP’s car
+  Repositories:
+    - https://github.com/things-nyc/ManhattanMapper
+
+
+- Title: HarlemHeat remote measurements
+  Lead: brianvanthull
+  Contributors:
+    - terrymoore
+    - frankleonrose
+    - forrestfiller
+  Type: Device
+  Description: |
+    As part of the Harlem Heat Project, Brian has deployed a number of off-the-shelf sensors to measure indoor
+    temperatures in the city. He would like to collect data from the sensors via TTN. However, he would like
+    to avoid having to visit the sensors to replace batteries every two weeks.
+
+    Terry provided Brian with a set of [Catena](https://github.com/mcci-catena/HW-Designs)-based sensors as
+    a first stage of the project. They work well communicating with a gateway high on the CUNY campus, but they
+    still consume power at a higher rate than Brian would like.
+
+    Frank and Forrest figured out the protocol for communicating with existing long-running off-the-shelf
+    temperature sensors. Now Frank is putting together a communications board that will be able to transmit
+    readings via LoRa while conserving power by going into deep sleep while inactive.
+  Status: Prototyping power management
+  Nextsteps:
+    - Deploy and test battery longevity
+
+
+- Title: ISeeChange remote measurements
+  Lead: frankleonrose
+  Contributors:
+    - chrisstratton
+    - brianvanthull
+  Type: Device
+  Description: |
+    ISeeChange uses off-the-shelf high quality environmental sensors. The sensor manufacturer offers a
+    cellular-based remote logging solution, but it is expensive.
+
+    TTN-NY offered to build a LoRa based communications board for the sensor in order to test whether
+    such a system would work for ISeeChange. In contrast to the HarlemHeat project, ISeeChange uses the next
+    generation of sensor which has replaced serial communication with a USB-wrapped-serial system.
+    The main challenge of this project is to build a low power board that acts as a USB host and then fit
+    the entire communications board into the new enclosure.
+  Status: Prototyping
+  Nextsteps:
+    - Build USB host that talks to USB serial sensor board.
+    - Print custom board that fits in small enclosure
+
+
+- Title: MapTheThings
+  Lead: frankleonrose
+  Contributors: forrestfiller
+  Type:
+    - Server
+    - Device
+    - App
+  Description: |
+    TTN Mapper [https://ttnmapper.org/](https://ttnmapper.org/) is the standard mapping service used by more than 1500 TTN users globally.
+    It contains more than 3 million transmission data points.
+
+    Frank created the MapTheThings [https://map.thethings.nyc](https://map.thethings.nyc) service as a fully open source alternative
+    with scalability as a primary goal. The service summarizes successful and attempted
+    transmissions into a multi-scale geo-hashed grid so that displaying data for any region on the globe
+    requires a (roughly) constant and relatively small volume of data downloaded. The server is deployed
+    on Heroku with SQS buffering and summary data is served directly from S3.
+
+    On the node side,
+    MapTheThings pairs a bluetooth and LoRa enabled node with an iOS app that tracks location and
+    drives transmission of packets. A GPS-equipped LoRa node can also send location packets, but in
+    this use case there is no tracking of attempted transmissions.
+  Status: Operational.
+  Nextsteps:
+    - Do more LoRa walking.
+    - Data re-processing tools.
+    - Improve scalability (Lambda + merging infrastructure like Kinesis or MR).
+    - Data slicing features.
+  Repositories:
+    - https://github.com/things-nyc/mapthethings-server
+    - https://github.com/things-nyc/mapthethings-ios
+    - https://github.com/things-nyc/mapthethings-arduino
+
