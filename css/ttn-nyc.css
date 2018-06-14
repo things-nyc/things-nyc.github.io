@@ -1,0 +1,13 @@
+.filter-box {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 10%;
+  border-color: white;
+  border-width: .5;
+  border-style: solid;
+}
+
+.filter-box div {
+  width: 70px;
+  text-align: center;
+}

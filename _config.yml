@@ -1,5 +1,7 @@
 timezone: America/New_York
 # source: source_folder
-# collections:
-#   - projects
+collections:
+  posts:
+    output:   true
 remote_theme: BlackrockDigital/startbootstrap-stylish-portfolio
+repository: things-nyc/things-nyc.github.io
