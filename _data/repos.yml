@@ -1,0 +1,139 @@
+# There are some non-things-nyc repos that we'd like to feature on the website
+mcci/arduino-lmic:
+  description: >
+    Arduino library implementing LoRaWAN network stack.
+    Directly operates Semtech SX127x radio chips.
+  html_url: https://github.com/mcci/arduino-lmic
+  topics:
+    - Arduino
+    - Library
+
+TheThingsNetwork/arduino-device-lib:
+  description: >
+    Arduino Library for TTN Devices using the RN2483 radio.
+  html_url: https://github.com/TheThingsNetwork/arduino-device-lib
+  topics:
+    - Arduino
+    - Data
+    - Library
+
+frankleonrose/LoraStack:
+  html_url: https://github.com/frankleonrose/LoraStack
+  description: >
+    A library that implements the 'arduino-device-lib' high level API,
+    but down below uses LMiC for direct control of SX127x radios.
+    Uses PlatformIO to standardize and simplify dependency management.
+  topics:
+    - Arduino
+    - PlatformIO
+    - Library
+
+frankleonrose/TemperatureThing:
+  html_url: https://github.com/frankleonrose/TemperatureThing
+  description: >
+    Arduino code for a basic temperature monitoring node. Runs on an Adafruit Feather LoRa
+    and expects to communicate via SPI with FRAM chip to store LoRaWAN operational parameters.
+  topics:
+    - Node
+    - PlatformIO
+
+# Adding topics using data file because Github Metadata plugin does not (yet) fetch repo topics
+things-nyc/ManhattanMapper:
+  topics:
+    - Node
+    - Mapping
+    - PlatformIO
+
+things-nyc/ttn-post-adapter:
+  topics:
+    - Server
+    - Data
+
+things-nyc/heat-seek-feather-m0-lora:
+  topics:
+    - Node
+
+things-nyc/mapthethings-server:
+  topics:
+    - Mapping
+    - Server
+
+things-nyc/mapthethings-arduino:
+  topics:
+    - Mapping
+    - Node
+    - PlatformIO
+
+things-nyc/mapthethings-ios:
+  topics:
+    - Mapping
+    - App
+
+things-nyc/loramote_sigmap:
+  topics:
+    - Mapping
+    - Node
+
+things-nyc/multitech-installer:
+  topics:
+    - Gateway
+
+# Lots of the repos don't need to be featured on the website
+things-nyc/arduino-lmic:
+  exclude: true
+
+things-nyc/blog:
+  exclude: true
+
+things-nyc/Adafruit_BME280_Library:
+  exclude: true
+
+things-nyc/arduino_and_pc_minimal_gateway:
+  exclude: true
+
+things-nyc/boston-dec-2016-demo:
+  exclude: true
+
+things-nyc/budget_node:
+  exclude: true
+
+things-nyc/collateral-archive:
+  exclude: true
+
+things-nyc/initial-state-example:
+  exclude: true
+
+things-nyc/mapthethings-web-client:
+  exclude: true
+
+things-nyc/proptest:
+  exclude: true
+
+things-nyc/random-eui64:
+  exclude: true
+
+things-nyc/sigmap:
+  exclude: true
+
+things-nyc/testnode-arm-cortex-mbed-lmic-1.5:
+  exclude: true
+
+things-nyc/things-nyc-docs:
+  exclude: true
+
+things-nyc/things-nyc-workgroup:
+  exclude: true
+
+things-nyc/things-nyc.github.io:
+  exclude: true
+
+things-nyc/ttn-http-nodejs-middleware:
+  exclude: true
+
+things-nyc/ttn-sms-hackathon:
+  exclude: true
+
+things-nyc/wiki:
+  exclude: true
+  topics:
+    - SHOULD_NOT_SHOW
