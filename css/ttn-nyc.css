@@ -11,3 +11,18 @@
   width: 70px;
   text-align: center;
 }
+
+th, td {
+  padding: 15px;
+  text-align: center;
+  width: 100px;
+  background: linear-gradient(0deg, white 0%, #337ab7 10%, white 125%);
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
