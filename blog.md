@@ -1,25 +1,25 @@
 ---
 layout: default
 wrap: true
-title: TheThingsNetwork NYC
+title: TTN NYC Blog
 ---
+# {{ page.title }}
 
 <div class="filter-box">
-  Show by Category:
+  Show by Tag:
   <div id="show-all">All</div>
-{% for cat_entry in site.categories %}
-  <div id="show-{{ cat_entry[0] }}">{{ cat_entry[0] }}</div>
+{% for tag_entry in site.tags %}
+  <div id="show-{{ tag_entry[0] }}">{{ tag_entry[0] }}</div>
 {% endfor %}
 </div>
 
-<ul>
-  {% for post in site.posts %}
-    <li class="post{% for cat in post.categories %} category-{{ cat }}{% endfor %}">
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      {{ post.excerpt }}
-    </li>
-  {% endfor %}
-</ul>
+{% for post in site.posts %}
+  <div class="post{% for tag in post.tags %} tag-{{ tag }}{% endfor %}" markdown="1">
+## [{{ post.title }}]({{ post.url }})
+{{ post.excerpt }}
+Tags: {{post.tags | join: ", " }}
+  </div>
+{% endfor %}
 
 <script>
 function setVisibility(name, vis) {
@@ -29,12 +29,12 @@ function setVisibility(name, vis) {
 }
 function hideAll() { setVisibility("post", "none") }
 function showAll() { setVisibility("post", "unset") }
-function showCategory(category) {
+function showClass(tag) {
   hideAll();
-  setVisibility(category, "unset");
+  setVisibility(tag, "unset");
 }
 document.getElementById("show-all").addEventListener("click",showAll,false);
-{% for cat_entry in site.categories %}
-document.getElementById("show-{{ cat_entry[0] }}").addEventListener("click",function(e) { showCategory("category-{{ cat_entry[0] }}"); }, false);
+{% for tag_entry in site.tags %}
+document.getElementById("show-{{ tag_entry[0] }}").addEventListener("click",function(e) { showClass("tag-{{ tag_entry[0] }}"); }, false);
 {% endfor %}
 </script>

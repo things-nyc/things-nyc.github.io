@@ -34,11 +34,11 @@ title: TTN NYC Repositories of Interest
 {% unless site.data.repos[repo.full_name].exclude %}
   <div class="post{% for topic in rtopics %} topic-{{ topic }}{% endfor %}" markdown="1">
 ## [{{ repo.name }}]({{ repo.html_url }})
-     {{repo.description}}
-    {% if site.data.repos[repo.full_name] %}
-      {% if site.data.repos[repo.full_name].description %}
-     {{site.data.repos[repo.full_name].description}}
-    {% endif %}
+    {{repo.description}}
+    {% if site.data.repos[repo.full_name] -%}
+      {% if site.data.repos[repo.full_name].description -%}
+        {{site.data.repos[repo.full_name].description}}
+      {% endif %}
 Topics: {{ site.data.repos[repo.full_name].topics | join: ", " }}
     {% endif %}
   </div>
