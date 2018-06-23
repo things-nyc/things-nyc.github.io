@@ -12,6 +12,11 @@
   text-align: center;
 }
 
+.section-share {
+  display: flex;
+  flex-direction: row;
+}
+
 th, td {
   padding: 15px;
   text-align: center;
