@@ -83,7 +83,7 @@ The Manhattan Mapper is an Arduino sketch that relies on a stack of libraries to
 <table class="fixed-width" width="100%">
 <tr><td colspan="5">
   <div markdown="1">
-  [Manhattan Mapper](https://github.com/things-nyc/ManhattanMapper)
+  [Manhattan Mapper](https://github.com/frankleonrose/ManhattanMapper)
   <div class="text-left" markdown="1">
   - Configures TTN with app ID and device ID
   - Defines Respire mode control structure
@@ -153,7 +153,7 @@ The Manhattan Mapper is an Arduino sketch that relies on a stack of libraries to
 </tr>
 </table>
 
-The top level code is at [https://github.com/things-nyc/ManhattanMapper](https://github.com/things-nyc/ManhattanMapper).
+The top level code is at [https://github.com/frankleonrose/ManhattanMapper](https://github.com/frankleonrose/ManhattanMapper).
 
 ### Building
 The project has a `platformio.ini` file that specifies all dependencies as well as build flags. Running `platformio run` will download all packages into a project-local subdirectory and build the project. I highly recommend installing [PlatformIO](https://platformio.org/) and using it. No need to integrate it with your editor, but you can if you like. Of course it is possible to build the project using the Arduino IDE as well. You'll have to hunt for the repos using the GUI. I leave that as an unpleasant exercise for the reader.

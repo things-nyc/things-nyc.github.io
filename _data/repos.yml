@@ -37,13 +37,16 @@ frankleonrose/TemperatureThing:
     - Node
     - PlatformIO
 
-# Adding topics using data file because Github Metadata plugin does not (yet) fetch repo topics
-things-nyc/ManhattanMapper:
+frankleonrose/ManhattanMapper:
+  html_url: https://github.com/frankleonrose/ManhattanMapper
+  description: >
+    Car-based coverage mapping node for New York City
   topics:
     - Node
     - Mapping
     - PlatformIO
 
+# Adding topics using data file because Github Metadata plugin does not (yet) fetch repo topics
 things-nyc/ttn-post-adapter:
   topics:
     - Server
