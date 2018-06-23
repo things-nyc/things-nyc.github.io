@@ -3,10 +3,16 @@ layout: default
 ---
 <section class="content-section bg-primary text-white text-center" id="projects">
   <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 text-left">
+    <div class="col-lg-6 col-lg-offset-3 text-center">
       <h1>{{ page.title }}</h1>
-      <h2>by <a href={{ site.data.people[page.author].profile }}>{{ site.data.people[page.author].name }}</a></h2>
+      <h3>by <a href={{ site.data.people[page.author].profile }}>{{ site.data.people[page.author].name }}</a></h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3 text-left">
       {{ content }}
     </div>
   </div>
 </section>
+{% include share.html %}
+

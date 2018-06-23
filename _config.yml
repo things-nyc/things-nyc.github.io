@@ -5,3 +5,10 @@ collections:
     output:   true
 remote_theme: BlackrockDigital/startbootstrap-stylish-portfolio
 repository: things-nyc/things-nyc.github.io
+permalink: pretty
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
