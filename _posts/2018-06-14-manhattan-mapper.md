@@ -9,6 +9,8 @@ images: /img/2018-06-14-manhattan-mapper/
 ---
 The ManhattanMapper is a custom built mapping device used to measure network coverage from a car driving around New York City. It was constructed using Adafruit Feather boards with software written for the Arduino framework. The following describes the process of building the device and discusses the hardware and software involved.
 
+![In Car View]({{ page.images -}} in-car-view.png){: style="margin: auto; display: block;" height="50%" width="50%"}
+
 Shortcuts / [User Scenario](#user-scenario) / [Hardware](#hardware) / [Software](#software) / [Next Steps](#next-steps)
 
 ## Background
@@ -70,6 +72,20 @@ I put the hardware together tentatively, with some fear about soldering things t
 
 All signal lines go from the µCU board to one of the three FeatherWings. There are no signals between the daughterboards. By the nature of the assembly, any signals going to the OLED board need not be soldered to the doubler board, because the signals are conveyed directly by pins in headers. Any pin conveying a signal to either the GPS or Adalogger needed to be soldered both to the OLED board and the GPS board (the top boards have the pins for soldering). Signals to the Adalogger travel up the header from the µCU, into the OLED pin, into the doubler crossover, into the GPS pin, and finally down the header into the Adalogger.
 
+I purchased 3 different cases from Hammond, because I wasn't sure which would fit the assembly. It turned out that the smallest one worked. In fact, once I cut the corners off of the four feather boards and notches out of the doubler, the assembly fit snugly without further attachment.
+
+![Notching]({{ page.images -}} notching.png){: style="margin: auto; display: block;" height="50%" width="50%"}
+
+One of the physical challenges was getting the top of the OLED screen to be at the same height as the top of the GPS module. It was important that the screen be close to the inner surface of the enclosure, because the blue plastic is not perfectly transparent and further away the screen would be too blurry to read.
+
+![Level Best]({{ page.images -}} level-best.png){: style="margin: auto; display: block;" height="50%" width="50%"}
+
+The first thing I did was remove the plastic spacer from the male headers on the bottom of the GPS board. That allows that board to sit right up against the doubler board. I made sure to put a piece of electrical tape down between the two to prevent any spurious electrical connections. Next I made sure to leave extra space when I soldered the OLED board to the doubler, ensuring that it would match the height of the GPS.
+
+![Sawing Headers]({{ page.images -}} sawing-headers.png){: style="margin: auto; display: block;" height="50%" width="50%"}
+
+Unfortunately, the raised OLED board meant the pins on the other side that need to mate with the µCU headers were too short. Note the difference in pin lengths circled in red in the image above. As I worked on fitting the whole thing in the enclosure I experienced a few episodes of unreliable operation resulting from the µCU board having slipped off the pins. Thankfully, I was able to solve the problem by using a razor saw to cut the top 1.5mm off the female headers, resulting in a shorter travel to get to the grippy electrical connection below.
+
 A late addition was a USB regulator. The Feather LoRa has no diode on VUSB meaning it is possible for battery current to back up into VUSB. I saw some odd behavior where the unit failed to get USB power after turning my car off. I had a hypothesis that it was related to this and so installed a USB power regulator. It didn't change the odd behavior, but I feel better knowing it's in there. Why did I use an SMD part? That's what I was looking at on Digikey and it seemed like it would fit.
 
 To wire in the regulator I had to cut the trace from the micro-USB connector to VUSB. Now where to pick off that incoming 5v? I removed the USB-power LED and got myself a nice little pad. I feed the output of the regulator onto the Feather-standard VUSB pin.
@@ -77,6 +93,12 @@ To wire in the regulator I had to cut the trace from the micro-USB connector to 
 ![USB regulator]({{ page.images -}} usb-regulator.png){: style="margin: auto; display: block;" height="50%" width="50%"}
 
 (The pair of resistors is a divider from VBAT feeding into an analog input pin for battery level testing.)
+
+The final modification was the addition of 3D printed buttons over the SMD buttons on the Feather OLED board. In the first build I had to press the buttons using a toothpick, which was inconvenient. The wide diameter base of the buttons sit directly on the SMD buttons. The narrower tops of the buttons poke through beveled holes in the enclosure.
+
+![Buttons]({{ page.images -}} buttons.png){: style="margin: auto; display: block;" height="50%" width="50%"}
+
+In order to keep the buttons exactly spaced between the board and enclosure, I had to mount the four-feather assembly to the enclosure. You can see one of the four hex bolts in the picture right above the white buttons.
 
 ## Software
 The Manhattan Mapper is an Arduino sketch that relies on a stack of libraries to do all the detailed work.
