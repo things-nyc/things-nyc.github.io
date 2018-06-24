@@ -8,6 +8,15 @@ mcci-catena/arduino-lmic:
     - Arduino
     - Library
 
+mcci-catena/arduino-lorawan:
+  description: >
+    C++ wrapper with nicer APIs for arduino-lmic. Really just a fancy shim,
+    but it centralizes a number of ugly details.
+  html_url: https://github.com/mcci-catena/arduino-lorawan
+  topics:
+    - Arduino
+    - Library
+
 TheThingsNetwork/arduino-device-lib:
   description: >
     Arduino Library for TTN Devices using the RN2483 radio.
