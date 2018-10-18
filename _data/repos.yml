@@ -1,9 +1,18 @@
 # There are some non-things-nyc repos that we'd like to feature on the website
-mcci/arduino-lmic:
+mcci-catena/arduino-lmic:
   description: >
     Arduino library implementing LoRaWAN network stack.
     Directly operates Semtech SX127x radio chips.
-  html_url: https://github.com/mcci/arduino-lmic
+  html_url: https://github.com/mcci-catena/arduino-lmic
+  topics:
+    - Arduino
+    - Library
+
+mcci-catena/arduino-lorawan:
+  description: >
+    C++ wrapper with nicer APIs for arduino-lmic. Really just a fancy shim,
+    but it centralizes a number of ugly details.
+  html_url: https://github.com/mcci-catena/arduino-lorawan
   topics:
     - Arduino
     - Library
