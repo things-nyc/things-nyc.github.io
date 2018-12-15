@@ -31,3 +31,15 @@ table {
 table, th, td {
   border: 1px solid black;
 }
+
+p.links a {
+  display: inline-block;
+  color: #fff;
+  background-color: rgba(0,0,0,0.4);
+  padding: 5px;
+  margin: auto 5px;
+}
+
+.ttn-logo {
+  width: 100%;
+}
