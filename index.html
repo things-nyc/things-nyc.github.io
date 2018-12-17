@@ -12,30 +12,43 @@ title: TheThingsNetwork NYC
             <h3>Owned and Operated by its Users in the Five Boroughs of New York City</h3>
             <!--<h2><a href="https://doodle.com/poll/25auhuiu23v4knzh#table">Suggest Another Time (no sign-in required)</a></h2>-->
             <br>
-
             {% include menubar.html %}
-          </div>
+        </div>
+        <a href="https://github.com/things-nyc">
+            <img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub">
+        </a>
     </header>
 
     <!-- Brief -->
     <section id="brief" class="brief">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
-                  <h2>About</h2>
-                  <p class="lead">Our goal is to build a data network with complete, redundant coverage of the Five Boroughs.</p>
-                  <p class="lead">The network is free to access, is based on open source software, and is owned and operated by its users.</p>
-                  <p class="lead">There is already tremendous progress being made here in NYC.
+                <div class="col-lg-5 text-center">
+                    <img class="ttn-logo" src="/img/TTN-NewYork-logo-circle.png" />
+                </div>
+                <div class="col-lg-7 padding-top">
+                    <h2>Mission</h2>
+                    <p class="lead">Our goal is to build a data network with complete, redundant coverage of the Five Boroughs.</p>
+                    <p class="lead">The network is free to access, is based on open source software, and is owned and operated by its users.</p>
+                    <p class="lead">There is already tremendous progress being made here in NYC.
                     Read about all our <a href="/projects">active projects here</a>
                     and check out our <a href="/repos">repos of interest</a>.</p>
-                  <p class="lead">We invite you to read our <a href="https://github.com/things-nyc/things-nyc-docs/wiki">Wiki</a> for more details.</p>
-                  <p class="lead">If you are interested in getting involved, please join our <a href="https://www.meetup.com/The-Things-Network-NYC-Community-Meetup/">Meetup Group</a>.</p>
-                  <p class="lead">Want to contribute? Select <a href="https://smile.amazon.com/gp/chpf/homepage?q=the+things+network+new+york">The Things Network New York</a> as your AmazonSmile charity.</p>
+                    <p class="lead">We invite you to read our <a href="https://github.com/things-nyc/things-nyc-docs/wiki">Wiki</a> for more details.</p>
+                    <p class="lead">If you are interested in getting involved, please join our <a href="https://www.meetup.com/The-Things-Network-NYC-Community-Meetup/">Meetup Group</a>.</p>
+                    <p class="lead">Want to contribute? Select <a href="https://smile.amazon.com/gp/chpf/homepage?q=the+things+network+new+york">The Things Network New York</a> as your AmazonSmile charity.</p>
                 </div>
             </div>
             <!-- /.row -->
         </div>
         <!-- /.container -->
+    </section>
+
+    <section class="callout">
+      <div class="container text-center">
+        <h2 class="mx-auto mb-5">Featured Project</h2>
+        <p class="lead">Using LoRaWAN with GPS, we aim map TTN coverage around Manhattan.</p>
+        <p><a class="btn btn-primary btn-xl" href="/2018/06/14/manhattan-mapper/">Manhattan Mapper</a></p>
+      </div>
     </section>
 
     <!-- Support -->
@@ -59,15 +72,16 @@ title: TheThingsNetwork NYC
         <!-- /.container -->
     </section>
 
-    <!-- About -->
     <section id="about" class="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Links</h2>
+                    <h2>Get updates, follow, and interact!</h2>
+                    <p class="links">
                     {% for link in site.data.links %}
-                        <p class="lead"><a href="{{ link.url }}">{{ link.title }}</a></p>
+                        <a href="{{ link.url }}">{{ link.title }}</a>
                     {% endfor %}
+                    </p>
 
                     <a href="https://twitter.com/thethingsnyc" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @thethingsnyc</a>
                     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
