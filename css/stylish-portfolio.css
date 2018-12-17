@@ -185,11 +185,17 @@ hr.small {
     width: 100%;
     height: 400px;
     color: #fff;
-    background: url(../img/callout.jpg) no-repeat center center scroll;
+    padding-top: 5em;
+    background: url(../img/2018-06-14-manhattan-mapper/stacked.png) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+}
+
+.callout .container {
+  background: rgba(0,0,0,0.4);
+  border-radius: 10px;
 }
 
 /* Portfolio */

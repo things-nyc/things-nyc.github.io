@@ -38,8 +38,13 @@ p.links a {
   background-color: rgba(0,0,0,0.4);
   padding: 5px;
   margin: auto 5px;
+  border-radius: 4px;
 }
 
 .ttn-logo {
   width: 100%;
+}
+
+.menubar a.btn.btn-dark.btn-lg {
+  border-radius: 4px;
 }
