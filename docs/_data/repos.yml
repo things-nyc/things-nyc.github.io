@@ -1,3 +1,4 @@
+---
 # There are some non-things-nyc repos that we'd like to feature on the website
 mcci-catena/arduino-lmic:
   description: >
@@ -149,3 +150,4 @@ things-nyc/wiki:
   exclude: true
   topics:
     - SHOULD_NOT_SHOW
+...

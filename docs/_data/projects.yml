@@ -1,3 +1,4 @@
+---
 - Title: Outreach and Gateway Deployment
   Lead: terrymoore
   Type: Organization
@@ -35,7 +36,7 @@
     - https://github.com/IthacaThings/ttn-multitech-cm
     - https://github.com/IthacaThings/meta-ttni
     - https://github.com/jchonig/mlinux-be
-    - https://hub.docker.com/r/jchonig/mlinux-be/
+    - https://hub.docker.com/r/jchonig/mlinux-be
 
 - Title: Organization, Presence, and Funding
   Lead: terrymoore
@@ -153,3 +154,4 @@
     - https://github.com/things-nyc/mapthethings-server
     - https://github.com/things-nyc/mapthethings-ios
     - https://github.com/things-nyc/mapthethings-arduino
+...

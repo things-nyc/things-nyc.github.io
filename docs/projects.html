@@ -46,13 +46,15 @@ title: TheThingsNetwork NYC Projects
           </div> -->
           {% if project.Documentation %}
             <div><label>Documentation:</label>
-              <a href="{{ project.Documentation }}"><span>{{ project.Documentation }}</span></a></div>
+              <a href="{{ project.Documentation }}" target=_blank><span>{{ project.Documentation }}</span></a></div>
           {% endif %}
           {% if project.Repositories %}
           <div><label>Repositories:</label>
-          {% for repo in project.Repositories %}
-            <a href="{{ repo }}"><span>{{ repo }}</span></a>{% if forloop.last == false %},{% endif %}
-          {% endfor %}
+            <ul>
+              {% for repo in project.Repositories %}
+              <li><a href="{{ repo }}" target=_blank><span>{{ repo }}</span></a></li>
+              {% endfor %}
+	    </ul>
           </div>
           {% endif %}
         </div>
