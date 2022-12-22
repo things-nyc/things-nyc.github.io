@@ -1,0 +1,22 @@
+---
+layout: default
+title: TheThingsNetwork NYC People
+---
+<section class="content-section bg-primary text-white text-center" id="people">
+  <div class="container">
+    <div class="content-section-heading">
+      <h2 class="mb-5">Team Members</h2>
+      <p> People do or have contributed to The Things Network NYC. </p>
+    </div>
+  </div>
+  <div class="row">
+    {% for data in site.data.people %}
+    {% assign person = data[1] %}
+    {% if person.profile %}
+    <h3> <a href="{{ person.profile }}" target=_blank>{{person.name }}</a> </h3>
+    {% else %}
+    <h3> {{person.name }}</h3>
+    {% endif %}
+    {% endfor %}
+  </div>
+</section>
