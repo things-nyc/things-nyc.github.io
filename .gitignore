@@ -1,1 +1,5 @@
+#*
+*.new
+*~
+.DS_Store
 docs/_site/
