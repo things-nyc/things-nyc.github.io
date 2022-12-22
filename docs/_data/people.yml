@@ -1,24 +1,14 @@
 ---
 # Specific people named in site with profile link.
-terrymoore:
-  name: Terry Moore
-  profile: https://github.com/terrillmoore
+# KEEP THIS SORTED BY LAST NAME
 
-frankleonrose:
-  name: Frank Leon Rose
-  profile: https://github.com/frankleonrose
-
-chrismerck:
-  name: Chris Merck
-  profile: https://github.com/chrismerck
+forrestfiller:
+  name: Forrest Filler
+  profile: https://github.com/forrestfiller
 
 mimiflynn:
   name: Mimi Flynn
   profile: https://github.com/mimiflynn
-
-chrisstratton:
-  name: Chris Stratton
-  profile: https://github.com/cstratton
 
 elliotthighfill:
   name: Elliott Highfill
@@ -28,9 +18,21 @@ jeffhonig:
   name: Jeff Honig
   profile: https://github.com/jchonig
 
-forrestfiller:
-  name: Forrest Filler
-  profile: https://github.com/forrestfiller
+chrismerck:
+  name: Chris Merck
+  profile: https://github.com/chrismerck
+
+terrymoore:
+  name: Terry Moore
+  profile: https://github.com/terrillmoore
+
+frankleonrose:
+  name: Frank Leon Rose
+  profile: https://github.com/frankleonrose
+
+chrisstratton:
+  name: Chris Stratton
+  profile: https://github.com/cstratton
 
 brianvanthull:
   name: Brian Vant-Hull
