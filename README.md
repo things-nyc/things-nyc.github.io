@@ -18,8 +18,7 @@ Website pages live in the `docs` directory.
 ```bash
 git clone https://github.com/things-nyc/things-nyc.github.io.git
 cd things-nyc.github.io
-docker-compose build
-docker-compose up
+make up
 # Open http://localhost:4000 in your browser
 # Edit files in docs/
 # Commit your changes and push to a branch
@@ -52,3 +51,5 @@ In that case, follow the suggestions from [StackOverflow](https://stackoverflow.
 * Try rebooting the Linux system, then retry `docker-compose build`.
 
 In our limited experience, the first step was enough.
+
+
