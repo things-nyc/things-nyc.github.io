@@ -34,7 +34,7 @@ title: TheThingsNetwork NYC Projects
           </div>
           <div><label>Lead:</label>
             {% if site.data.people[project.Lead] %}
-              <a href="{{ site.data.people[project.Lead].profile }}"><span>{{ site.data.people[project.Lead].name }}</span></a>
+              <a href="{{ site.data.people[project.Lead].profile }}"><span>{{ site.data.people[project.Lead].name }} <i class="fa fa-external-link"></i></span></a>
             {% else %}
               <span>{{ project.Lead }}</span>
             {% endif %}
@@ -46,13 +46,13 @@ title: TheThingsNetwork NYC Projects
           </div> -->
           {% if project.Documentation %}
             <div><label>Documentation:</label>
-              <a href="{{ project.Documentation }}" target=_blank><span>{{ project.Documentation }}</span></a></div>
+              <a href="{{ project.Documentation }}" target=_blank><span>{{ project.Documentation }} <i class="fa fa-external-link"></i></span></a></div>
           {% endif %}
           {% if project.Repositories %}
           <div><label>Repositories:</label>
             <ul>
               {% for repo in project.Repositories %}
-              <li><a href="{{ repo }}" target=_blank><span>{{ repo }}</span></a></li>
+              <li><a href="{{ repo }}" target=_blank><span>{{ repo }} <i class="fa fa-external-link"></i></span></a></li>
               {% endfor %}
 	    </ul>
           </div>
