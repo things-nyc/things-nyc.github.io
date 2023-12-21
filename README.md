@@ -18,11 +18,28 @@ Website pages live in the `docs` directory.
 ```bash
 git clone https://github.com/things-nyc/things-nyc.github.io.git
 cd things-nyc.github.io
-make up
+make
 # Open http://localhost:4000 in your browser
 # Edit files in docs/
 # Commit your changes and push to a branch
 # Create a Pull Request on Github
+```
+
+#### Notes
+
+The `_dl` and `_site` directories are temporary, created by the fetch
+and build process, any changes there will be overwritten.
+Use
+```bash
+make clean
+```
+to delete them.
+They will not saved to github.
+
+To update a JavaScript package, update the version info in the
+`Makefile` and
+```bash
+make fetch
 ```
 
 #### Details

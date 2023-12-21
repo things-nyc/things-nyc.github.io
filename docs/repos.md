@@ -33,7 +33,7 @@ title: TTN NYC Repositories of Interest
   {% endif %}
 {% unless site.data.repos[repo.full_name].exclude %}
   <div class="post{% for topic in rtopics %} topic-{{ topic }}{% endfor %}" markdown="1">
-## [{{ repo.name }}]({{ repo.html_url }}){:target="_blank"}
+## <a href="{{ repo.html_url}}" target=_blank>{{ repo.name }} <i class="fa fa-external-link"></i></a>
     {{repo.description}}
     {% if site.data.repos[repo.full_name] -%}
       {% if site.data.repos[repo.full_name].description -%}
@@ -53,7 +53,7 @@ Topics: {{ site.data.repos[repo.full_name].topics | join: ", " }}
     {% assign repo = entry[1] %}
     {% assign rtopics = repo.topics %}
   <div class="post{% for topic in rtopics %} topic-{{ topic }}{% endfor %}" markdown="1">
-## [{{ entry[0] }}]({{ repo.html_url }}){:target="_blank"}
+## <a href="{{ repo.html_url}}" target=_blank>{{ entry[0] }} <i class="fa fa-external-link"></i></a>
     {{repo.description}}
 Topics: {{ repo.topics | join: ", " }}
   </div>

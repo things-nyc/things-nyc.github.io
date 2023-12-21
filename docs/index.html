@@ -4,16 +4,28 @@ title: The Things Network NY
 ---
     <!-- Header -->
     <header id="top" class="header">
-        <div class="text-vertical-center">
-            <h1>The Things Network</h1>
-            <h1>New York</h1>
-            <h3>A non-profit community supporting a free network for remote sensing for education, civic empowerment, and economic development in New York and around the world</h3>
-            <br>
+      <div class="text-vertical-center">
+	<div class="container">
+	  <div class="row">
+            <h1>The Things Network New York</h1>
+	  </div>
+	  <div class="row">
+            <h3>
+	      A non-profit community supporting a free network for remote sensing for education, civic empowerment, and economic development in New York and around the world
+	    </h3>
+	  </div>
+	  <div class="row">
             {% include menubar.html %}
+	  </div>
         </div>
-        <a href="https://github.com/things-nyc/things-nyc.github.io" target=_blank>
-            <img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub">
-        </a>
+	<div class="row">
+	  <style>.github-fork-ribbon:before { background-color: #333; }</style>
+	  <a class="github-fork-ribbon left-top"
+	     href="http://github.com/things-nyc/things-nyc.github.io/fork"
+	     data-ribbon="Fork me on GitHub"
+	     title="Fork me on GitHub">Fork me on GitHub</a>
+	</div>
+      </div>
     </header>
 
     <!-- Brief -->
@@ -30,9 +42,8 @@ title: The Things Network NY
                     <p class="lead">
                     Read about our <a href="/projects">active projects here</a>
                     and check out our <a href="/repos">repos of interest</a>.</p>
-                    <p class="lead">We invite you to read our <a href="https://github.com/things-nyc/things-nyc-docs/wiki" target=_blank>Wiki</a> for more details.</p>
-                    <p class="lead">If you are interested in getting involved, please join our <a href="https://www.meetup.com/The-Things-Network-NYC-Community-Meetup/" target=_blank>Meetup Group</a>.</p>
-                    <p class="lead">Want to contribute? Select <a href="https://smile.amazon.com/gp/chpf/homepage?q=the+things+network+new+york" target=_blank>The Things Network New York</a> as your AmazonSmile charity.</p>
+                    <p class="lead">We invite you to read our <a href="https://github.com/things-nyc/things-nyc-docs/wiki" target=_blank>Wiki <i class="fa fa-external-link"></i></a> for more details.</p>
+                    <p class="lead">If you are interested in getting involved, please join our <a href="https://www.meetup.com/The-Things-Network-NYC-Community-Meetup/" target=_blank>Meetup Group <i class="fa fa-external-link"></i></a>.</p>
                 </div>
             </div>
             <!-- /.row -->
@@ -44,7 +55,7 @@ title: The Things Network NY
       <div class="container text-center">
         <h2 class="mx-auto mb-5">Featured Project</h2>
         <p class="lead">Using LoRaWAN with GPS, we aim map TTN coverage around Manhattan.</p>
-        <p><a class="btn btn-primary btn-xl" href="/2018/06/14/manhattan-mapper/">Manhattan Mapper</a></p>
+        <p><a class="btn btn-primary btn-xl" href="/2018/06/14/manhattan-mapper/">Manhattan Mapper <i class="fa fa-external-link"></i></a></p>
       </div>
     </section>
 
@@ -75,12 +86,8 @@ title: The Things Network NY
                     <h2>Get updates, follow, and interact!</h2>
                     <p class="links">
                     {% for link in site.data.links %}
-                        <a href="{{ link.url }}" target=_blank>{{ link.title }}</a>
+                        <a href="{{ link.url }}" target=_blank>{{ link.title }} <i class="fa fa-external-link"></i></a>
                     {% endfor %}
-                    </p>
-
-                    <a href="https://twitter.com/thethingsnyc" target=_blank class="twitter-follow-button" data-show-count="false" data-size="large">Follow @thethingsnyc</a>
-                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
                 </div>
             </div>
             <!-- /.row -->
@@ -89,33 +96,25 @@ title: The Things Network NY
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                  <!--<h4><strong>Start Bootstrap</strong>-->
-                    </h4>
-                    <p>Contact</p>
-                    <ul class="list-unstyled">
-                      <li>Initiator: <!--<i class="fa fa-envelope-o fa-fw"></i>-->  <a href="mailto:terry@thethings.nyc">terry@thethings.nyc</a>
-                        </li>
-                    </ul>
-                    <br>
-                    <p>Title photo by <a href="https://www.flickr.com/photos/88374602@N06/13118009065/" target=_blank>Bonnie Council</a> used with permission.</p>
-                    <!--
-                    <ul class="list-inline">
-                        <li>
-                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
-                        </li>
-                    </ul>
-                      -->
-                </div>
-            </div>
-        </div>
+    <footer class="container">
+      <div class="row">
+        <div class="col col-sm-4 text-left">
+	  Contact the ThingsNYC Initiator:
+	  <br>
+	  Terry Moore &lt;<a href="mailto:terry@thethings.nyc">terry@thethings.nyc</a>&gt;
+	</div>
+        <div class="col col-sm-4 text-center">
+	  Title
+	  <a href="https://www.flickr.com/photos/88374602@N06/13118009065/" target=_blank>photo <i class="fa fa-external-link"></i></a>
+	  by
+	  <a href="https://www.flickr.com/photos/88374602@N06//" target=_blank>Bonnie Council <i class="fa fa-external-link"></i></a>
+	  <br>
+	  Used with permission.
+	</div>
+        <div class="col col-sm-4 text-right">
+	  Hosted by <a href="https://pages.github.com/" target=_blank>GitHub Pages <i class="fa fa-external-link"></i></a>
+	  <br>
+	  See the source of this page <a href="http://github.com/things-nyc/things-nyc.github.io" target=_blank>on GitHub <i class="fa fa-external-link"></i></a>.
+	</div>
+      </div>
     </footer>

@@ -13,7 +13,7 @@ title: TheThingsNetwork NYC People
     {% for data in site.data.people %}
     {% assign person = data[1] %}
     {% if person.profile %}
-    <h3> <a href="{{ person.profile }}" target=_blank>{{person.name }}</a> </h3>
+    <h3> <a href="{{ person.profile }}" target=_blank>{{person.name }} <i class="fa fa-external-link"></i></a> </h3>
     {% else %}
     <h3> {{person.name }}</h3>
     {% endif %}
