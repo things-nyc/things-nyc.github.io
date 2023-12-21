@@ -81,16 +81,20 @@ title: The Things Network NY
 
     <section id="about" class="about">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Get updates, follow, and interact!</h2>
-                    <p class="links">
-                    {% for link in site.data.links %}
-                        <a href="{{ link.url }}" target=_blank>{{ link.title }} <i class="fa fa-external-link"></i></a>
-                    {% endfor %}
-                </div>
+          <div class="row">
+	    <div class="col text-center">
+	      <h2>Get updates, follow, and interact!</h2>
+	    </div>
+	  </div>
+          <div class="row">
+            <div class="col col-lg-12 text-center">
+              <p class="links">
+                {% for link in site.data.links %}
+                <a href="{{ link.url }}" target=_blank>{{ link.title }} <i class="fa fa-external-link"></i></a>
+                {% endfor %}
             </div>
-            <!-- /.row -->
+          </div>
+          <!-- /.row -->
         </div>
         <!-- /.container -->
     </section>
