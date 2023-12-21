@@ -11,6 +11,9 @@
 - url: https://github.com/things-nyc
   title: Github
 
+- url: https://masto.nyc/@thethingsnyc
+  title: Follow us on Mastodon
+
 - url: https://thethingsnetwork.org/
   title: The Things Network Global Website
 
@@ -23,4 +26,5 @@
 
 - url: https://the-things-network-new-york-inc.square.site/
   title: Donate (tax deductable)
+
 ...
