@@ -3,26 +3,24 @@ layout: default
 title: TheThingsNetwork NYC People
 ---
 <section class="content-section text-center" id="people">
-  <div class="container">
+  <div class="container-fluid">
     <div class="content-section-heading">
       <h2 class="text-primary">Team Members</h2>
       <p class="lead"> Current and past contributors to The Things Network NYC. </p>
     </div>
-    <div class="row row-cols-6">
+    <div class="row">
       {% for data in site.data.people %}
       {% assign person = data[1] %}
       <div class="col">
 	<div class="card border-primary">
 	  <div class="card-body">
-	    {% if person.profile %}
 	    <div class="card-title">
+	      {% if person.profile %}
 	      <a href="{{ person.profile }}" target=_blank>{{ person.name }} <i class="fa fa-external-link"></i></a>
+	      {% else %}
+	      {{ person.name }}
+	      {% endif %}
 	    </div>
-	    {% else %}
-	    <div class="card-title">
-	      {{person.name }}
-	    </div>
-	    {% endif %}
 	  </div>
 	</div>
       </div>
