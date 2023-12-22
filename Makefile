@@ -44,5 +44,6 @@ _dl:
 	mkdir _dl
 clean:
 	-rm -rf docs/_site _dl
+	-rm -f ${DEPENDS}
 
 true: ;
