@@ -1,4 +1,4 @@
-BOOTSTRAP_VERSION=4.6.2
+BOOTSTRAP_VERSION=5.2.3
 JQUERY_VERSION=3.7.1
 
 BOOTSTRAP_URL=https://github.com/twbs/bootstrap/releases/download/v${BOOTSTRAP_VERSION}/bootstrap-${BOOTSTRAP_VERSION}-dist.zip
