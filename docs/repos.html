@@ -1,34 +1,33 @@
 ---
 layout: default
-title: TTN NYC Repositories of Interest
+title: ThingsNY Repositories of Interest
 ---
 <section class="content-section container" id="people">
   <div class="container text-center">
     <div class="content-section-heading">
       <h2 class="text-primary">{{ page.title }}</h2>
       <p class="lead">Use the boxes below to narrow by topic</p>
+    </div>
 
-      {% assign topics = "" | split: "," %}
-      {% for entry in site.data.repos %}
-      {%   assign repo = entry[1] %}
-      {%   unless repo.exclude %}
-      {%     if repo.topics %}
-      {%       assign topics = topics | concat: repo.topics %}
-      {%     endif %}
-      {%   endunless %}
-      {% endfor %}
-      {% assign topics = topics | uniq %}
+    {% assign topics = "" | split: "," %}
+    {% for entry in site.data.repos %}
+    {%   assign repo = entry[1] %}
+    {%   unless repo.exclude %}
+    {%     if repo.topics %}
+    {%       assign topics = topics | concat: repo.topics %}
+    {%     endif %}
+    {%   endunless %}
+    {% endfor %}
+    {% assign topics = topics | uniq %}
 
-      <div class="container">
-	<div class="filter-box justify-content-md-center">
-	  <div class="btn btn-primary text-center" id="show-all">All</div>
-	  {% for topic in topics %}
-	  <div class="btn btn-primary text-center" id="show-{{ topic }}">{{ topic }}</div>
-	  {% endfor %}
-	</div>
+    <div class="container-fluid">
+      <div class="filter-box justify-content-sm-center mb-4">
+	<div class="btn btn-primary text-center" id="show-all">All</div>
+	{% for topic in topics %}
+	<div class="btn btn-primary text-center" id="show-{{ topic }}">{{ topic }}</div>
+	{% endfor %}
       </div>
     </div>
-    <p>
   </div>
 
 <!-- Loop through Things-NYC repositories -->
