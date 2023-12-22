@@ -19,7 +19,8 @@ title: TheThingsNetwork NYC
     <link href="/css/bootstrap.min.css" type="text/css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="/css/stylish-portfolio.css" type="text/css" rel="stylesheet">
+    <link href="/css/stylish-portfolio.css" type="text/css"
+	  rel="stylesheet">
 
     <link href="/css/ttn-nyc.css" rel="stylesheet" type="text/css">
 
@@ -53,53 +54,6 @@ title: TheThingsNetwork NYC
 
 <body>
 
-    <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle"><i class="fa fa-bars"></i></a>
-    <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-primary btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-            <li class="sidebar-brand">
-              <a href="/#top"  onclick=$("#menu-close").click(); >TTN NYC</a>
-            </li>
-            <li>
-              <a href="/#top" onclick=$("#menu-close").click(); >Home</a>
-            </li>
-            <li>
-              <a href="/#brief" onclick=$("#menu-close").click(); >Learn More</a>
-            </li>
-            <li>
-              <a href="/blog" onclick=$("#menu-close").click(); >Blog</a>
-            </li>
-            <li>
-              <a href="/people" onclick=$("#menu-close").click(); >People</a>
-            </li>
-            <li>
-              <a href="/projects" onclick=$("#menu-close").click(); >Projects</a>
-            </li>
-            <li>
-              <a href="/repos" onclick=$("#menu-close").click(); >Repos</a>
-            </li>
-            <li>
-	      <a href="https://github.com/things-nyc/things-nyc-docs/wiki"
-		 target=_blank
-		 onclick=$("#menu-close").click(); >Wiki<i class="fa fa-external-link"></i></a>
-            </li>
-            <li>
-              <a href="/faq" onclick=$("#menu-close").click(); >FAQ</a>
-            </li>
-	    <li>
-	      <a href="https://www.meetup.com/The-Things-Network-NYC-Community-Meetup/join"
-		 target=_blank
-		 onclick=$("#menu-close").click(); >Join Us!<i class="fa fa-external-link"></i></a>
-	    </li>
-	    <li>
-	      <a href="https://the-things-network-new-york-inc.square.site/"
-		 target=_blank
-		 onclick=$("#menu-close").click(); >Donate!<i class="fa fa-external-link"></i></a>
-	    </li>
-        </ul>
-    </nav>
-
     {% if page.url != "/" %}
       {% include menubar.html %}
     {% endif %}
@@ -129,22 +83,10 @@ title: TheThingsNetwork NYC
     <script src="/js/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script>
-    // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-
-    // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-
     // Scrolls to the selected menu item on the page
     $(function() {
         $('a[href*=\\#]:not([href=\\#])').click(function() {
