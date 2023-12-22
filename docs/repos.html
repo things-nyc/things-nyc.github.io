@@ -41,8 +41,8 @@ title: TTN NYC Repositories of Interest
   {%   unless site.data.repos[repo.full_name].exclude %}
   <div class="post{% for topic in rtopics %} topic-{{ topic }}{% endfor %}">
     <div class="card">
+      <div class="card-header text-primary text-center"><a href="{{ repo.html_url }}" target=_blank>{{ repo.full_name }} <i class="fa fa-external-link"></i></a></div>
       <div class="card-body">
-	<div class="card-title text-primary"><a href="{{ repo.html_url }}" target=_blank>{{ repo.full_name }} <i class="fa fa-external-link"></i></a></div>
 	<p class="lead">{{ repo.description }}</p>
 	{% if site.data.repos[repo.full_name] -%}
 	{%   if site.data.repos[repo.full_name].description -%}
@@ -65,8 +65,8 @@ title: TTN NYC Repositories of Interest
   {%     assign rtopics = repo.topics %}
   <div class="post{% for topic in rtopics %} topic-{{ topic }}{% endfor %}">
     <div class="card">
+      <div class="card-header text-primary text-center"><a href="{{repo.html_url}}" target=_blank>{{ user_repo | join: "/" }} <i class="fa fa-external-link"></i></a></div>
       <div class="card-body">
-	<div class="card-title text-primary"><a href="{{repo.html_url}}" target=_blank>{{ user_repo | join: "/" }} <i class="fa fa-external-link"></i></a></div>
 	<p class="lead">{{ repo.description }}</p>
 	<label class="text-primary">Topics:</label> {{ repo.topics | join: ", " }}
       </div>
