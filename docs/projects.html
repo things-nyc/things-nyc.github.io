@@ -4,17 +4,15 @@ title: TheThingsNetwork NYC Projects
 ---
 <section class="content-section container" id="projects">
   <div class="container text-primary text-center">
-    <h2 class="mb-5">Team Projects</h2>
-    <p  class="lead">
-      If you are interested in participating in any project, please
-      contact the project lead or look for them at one of our monthly
-      meetups!
-    </p>
+    <h2 >Team Projects</h2>
+    <p class="lead">If you are interested in participating in any
+      project, please contact the project lead or look for them at one
+      of our monthly meetups!</p>
   </div>
   {% for project in site.data.projects %}
-  <div class="card">
+  <div class="card border-primary">
+    <h4 class="card-header text-primary text-center">{{ project.Title }}</h4>
     <div class="card-body">
-      <h4 class="card-title text-primary text-center">{{ project.Title }}</h4>
       <div class="card-text text-left">
 	<div class="text-body">{{ project.Description | markdownify }}</div>
 	{% if project.Type %}
