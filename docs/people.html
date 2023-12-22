@@ -8,25 +8,25 @@ title: TheThingsNetwork NYC People
       <h2 class="text-primary">Team Members</h2>
       <p class="lead"> Current and past contributors to The Things Network NYC. </p>
     </div>
-  </div>
-  <div class="row row-cols-6">
-    {% for data in site.data.people %}
-    {% assign person = data[1] %}
-    <div class="col">
-      <div class="card">
-	<div class="card-body">
-	  {% if person.profile %}
-	  <div class="card-title">
-	    <a href="{{ person.profile }}" target=_blank>{{ person.name }} <i class="fa fa-external-link"></i></a>
+    <div class="row row-cols-6">
+      {% for data in site.data.people %}
+      {% assign person = data[1] %}
+      <div class="col">
+	<div class="card border-primary">
+	  <div class="card-body">
+	    {% if person.profile %}
+	    <div class="card-title">
+	      <a href="{{ person.profile }}" target=_blank>{{ person.name }} <i class="fa fa-external-link"></i></a>
+	    </div>
+	    {% else %}
+	    <div class="card-title">
+	      {{person.name }}
+	    </div>
+	    {% endif %}
 	  </div>
-	  {% else %}
-	  <div class="card-title">
-	    {{person.name }}
-	  </div>
-	  {% endif %}
 	</div>
       </div>
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
 </section>
