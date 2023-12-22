@@ -2,29 +2,21 @@
 layout: default
 title: The Things Network New York
 ---
+    {% include menubar.html %}
+
     <!-- Header -->
     <header id="top" class="header">
       <div class="text-vertical-center">
-	<div class="container">
+	<div class="container header-title">
 	  <div class="row">
-            <h1>{{ page.title }}</h1>
+            <h1 class="text-white">{{ page.title }}</h1>
 	  </div>
 	  <div class="row">
-            <h3>
+            <h3 class="text-white">
 	      A non-profit community supporting a free network for remote sensing for education, civic empowerment, and economic development in New York and around the world
 	    </h3>
 	  </div>
-	  <div class="row">
-            {% include menubar.html %}
-	  </div>
         </div>
-	<div class="row">
-	  <style>.github-fork-ribbon:before { background-color: #333; }</style>
-	  <a class="github-fork-ribbon left-top"
-	     href="http://github.com/things-nyc/things-nyc.github.io/fork"
-	     data-ribbon="Fork me on GitHub"
-	     title="Fork me on GitHub">Fork me on GitHub</a>
-	</div>
       </div>
     </header>
 
