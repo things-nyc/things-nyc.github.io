@@ -41,8 +41,9 @@ frankleonrose/LoraStack:
 frankleonrose/TemperatureThing:
   html_url: https://github.com/frankleonrose/TemperatureThing
   description: >
-    Arduino code for a basic temperature monitoring node. Runs on an Adafruit Feather LoRa
-    and expects to communicate via SPI with FRAM chip to store LoRaWAN operational parameters.
+    Arduino code for a basic temperature monitoring node. Runs on an
+    Adafruit Feather LoRa and expects to communicate via SPI with FRAM
+    chip to store LoRaWAN operational parameters.
   topics:
     - Node
     - PlatformIO
@@ -55,6 +56,36 @@ frankleonrose/ManhattanMapper:
     - Node
     - Mapping
     - PlatformIO
+
+IthacaThings/ttn-multitech-cm:
+  html_url: https://github.com/IthacaThings/ttn-multitech-cm
+  description: >
+    A system supporting the deployment, monitoring, and maintenance of
+    a fleet of Multi-Tech Conduit and Conduit AP gateways.  As part of
+    deploying hundreds of gateways to cover NYC and Ithaca regions of
+    New York State, the group manages these gateways as a service to
+    gateway owners.  The system uses the Ansible Configuration
+    Management tool to drive gateway configuration, an SSH jumphost to
+    enable secure remote access.
+  topics:
+    - Gateway
+
+IthacaThings/meta-ttni:
+  html_url: https://github.com/IthacaThings/meta-ttni
+  description: >
+    A Yocto layer to build mLinux images for Multi-Tech Conduit and
+    Conduit AP gateways pre-configured for management with ttn-multitech-cm.
+  topics:
+    - Gateway
+
+jchonig/docker-meetup-slack:
+  html_url: https://github.com/jchonig/docker-meetup-slack
+  description: >-
+    A python script that posts reminders about Meetup meetings to
+    Slack channels.  Used by thingsnyc and ttni (TTN Ithaca).
+  topics:
+    - Slack
+    - Meetup
 
 # Adding topics using data file because Github Metadata plugin does not (yet) fetch repo topics
 things-nyc/ttn-post-adapter:

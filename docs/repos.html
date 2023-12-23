@@ -1,0 +1,94 @@
+---
+layout: default
+title: ThingsNY Repositories of Interest
+---
+<section class="content-section container" id="people">
+  <div class="container text-center">
+    <div class="content-section-heading">
+      <h2 class="text-primary">{{ page.title }}</h2>
+      <p class="lead">Use the boxes below to narrow by topic</p>
+    </div>
+
+    {% assign topics = "" | split: "," %}
+    {% for entry in site.data.repos %}
+    {%   assign repo = entry[1] %}
+    {%   unless repo.exclude %}
+    {%     if repo.topics %}
+    {%       assign topics = topics | concat: repo.topics %}
+    {%     endif %}
+    {%   endunless %}
+    {% endfor %}
+    {% assign topics = topics | uniq %}
+
+    <div class="container-fluid">
+      <div class="filter-box justify-content-sm-center mb-4">
+	<div class="btn btn-primary text-center" id="show-all">All</div>
+	{% for topic in topics %}
+	<div class="btn btn-primary text-center" id="show-{{ topic }}">{{ topic }}</div>
+	{% endfor %}
+      </div>
+    </div>
+  </div>
+
+<!-- Loop through Things-NYC repositories -->
+  {% for repo in site.github.public_repositories %}
+  {%   if site.data.repos[repo.full_name] %}
+  {%     assign rtopics = site.data.repos[repo.full_name].topics %}
+  {%   else %}
+  {%     assign rtopics = "" | split: "," %}
+  {%   endif %}
+  {%   unless site.data.repos[repo.full_name].exclude %}
+  <div class="post{% for topic in rtopics %} topic-{{ topic }}{% endfor %}">
+    <div class="card">
+      <div class="card-header text-primary text-center"><a href="{{ repo.html_url }}" target=_blank>{{ repo.full_name }} <i class="fa fa-external-link"></i></a></div>
+      <div class="card-body">
+	<p class="lead">{{ repo.description }}</p>
+	{% if site.data.repos[repo.full_name] -%}
+	{%   if site.data.repos[repo.full_name].description -%}
+        {{     site.data.repos[repo.full_name].description }}
+	{%   endif %}
+	<label class="text-primary">Topics</label>: {{ site.data.repos[repo.full_name].topics | join: ", " }}
+	{% endif %}
+      </div>
+    </div>
+  </div>
+  {%   endunless %}
+  {% endfor %}
+
+<!-- Loop through selected external repositories -->
+  {% for entry in site.data.repos %}
+  {%   assign user_repo = entry[0] | split: "/" %}
+  {%   assign user = user_repo[0] %}
+  {%   unless user == "things-nyc" %}
+  {%     assign repo = entry[1] %}
+  {%     assign rtopics = repo.topics %}
+  <div class="post{% for topic in rtopics %} topic-{{ topic }}{% endfor %}">
+    <div class="card">
+      <div class="card-header text-primary text-center"><a href="{{repo.html_url}}" target=_blank>{{ user_repo | join: "/" }} <i class="fa fa-external-link"></i></a></div>
+      <div class="card-body">
+	<p class="lead">{{ repo.description }}</p>
+	<label class="text-primary">Topics:</label> {{ repo.topics | join: ", " }}
+      </div>
+    </div>
+  </div>
+  {%   endunless %}
+  {% endfor %}
+</section>  
+
+<script>
+function setVisibility(name, vis) {
+  [].forEach.call(document.getElementsByClassName(name), function (el) {
+    el.style.display = vis;
+  });
+}
+function hideAll() { setVisibility("post", "none") }
+function showAll() { setVisibility("post", "block") }
+function showCategory(category) {
+  hideAll();
+  setVisibility(category, "block");
+}
+document.getElementById("show-all").addEventListener("click",showAll,false);
+{% for topic in topics %}
+document.getElementById("show-{{ topic }}").addEventListener("click",function(e) { showCategory("topic-{{ topic }}"); }, false);
+{% endfor %}
+</script>
