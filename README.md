@@ -7,9 +7,17 @@ Changes made here will be reflected on [`thethings.nyc`](https://thethings.nyc) 
 ## Development
 
 The site is static HTML generated from markdown with
-[jekyll](https://jekyllrb.com/).
+[jekyll](https://jekyllrb.com/), using the [Bootstrap
+5](https://getbootstrap.com/docs/5.2/getting-started/introduction/) framework.
 
 Website pages live in the `docs` directory.
+
+### Updating the web pages
+
+XXX - Add some notes about the layout of the directory and what to
+modify.
+
+XXX - Add notes on how to add a blog entry.
 
 ### Running under docker
 
@@ -39,7 +47,7 @@ They will not saved to github.
 To update a JavaScript package, update the version info in the
 `Makefile` and
 ```bash
-make fetch
+make clean fetch
 ```
 
 #### Details
