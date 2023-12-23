@@ -1,10 +1,7 @@
 BOOTSTRAP_VERSION=5.2.3
-JQUERY_VERSION=3.7.1
 
 BOOTSTRAP_URL=https://github.com/twbs/bootstrap/releases/download/v${BOOTSTRAP_VERSION}/bootstrap-${BOOTSTRAP_VERSION}-dist.zip
-JQUERY_URL=https://code.jquery.com/jquery-${JQUERY_VERSION}.min.js
 DEPENDS= \
-	docs/js/jquery.min.js \
 	docs/js/bootstrap.bundle.min.js \
 	docs/js/bootstrap.bundle.min.js.map \
 	docs/css/bootstrap.min.css \
@@ -20,13 +17,6 @@ build: fetch
 	docker compose build
 
 fetch: ${DEPENDS}
-
-docs/js/jquery.min.js: _dl/jquery-${JQUERY_VERSION}.min.js
-	cp -p _dl/jquery-${JQUERY_VERSION}.min.js docs/js/jquery.min.js
-
-_dl/jquery-${JQUERY_VERSION}.min.js: _dl
-	cd _dl && umask 0 && \
-		wget -N -q ${JQUERY_URL}
 
 docs/js/bootstrap.bundle.min.js docs/js/bootstrap.bundle.min.js.map: _dl/bootstrap-${BOOTSTRAP_VERSION}-dist.zip
 	cp -p _dl/bootstrap-${BOOTSTRAP_VERSION}-dist/js/bootstrap.bundle.min.js docs/js/bootstrap.bundle.min.js
