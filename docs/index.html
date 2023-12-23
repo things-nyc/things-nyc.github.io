@@ -2,126 +2,129 @@
 layout: default
 title: The Things Network New York
 ---
-    {% include menubar.html %}
+<!-- Header -->
+<style>
+  #header {
+      background: url("../img/bg.jpg") no-repeat center;
+      background-size: cover;
+  }
+</style>
 
-    <!-- Header -->
-    <header id="top" class="header">
-      <div class="text-vertical-center">
-	<div class="container header-title">
-	  <div class="row">
-            <h1 class="text-white">{{ page.title }}</h1>
-	  </div>
-	  <div class="row">
-            <h3 class="text-white">
-	      A non-profit community supporting a free network for remote sensing for education, civic empowerment, and economic development in New York and around the world
-	    </h3>
-	  </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- Brief -->
-    <section id="brief" class="brief">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 text-center">
-                    <img class="ttn-logo" src="/img/TTN-NewYork-logo-circle.png" />
-                </div>
-                <div class="col-lg-7 padding-top">
-                    <h2 class="text-center text-primary">{{ page.title }}'s Mission</h2>
-                    <p class="lead">Our goal is to build a community of technical experts to support wider use of long-range public-access radio networking for remote sensing.</p>
-                    <p class="lead">We're doing this based on The Things Network, an international collaboration of community networks. The network is free to access, is based on open source software, and is owned and operated by its users.</p>
-                    <p class="lead">
-                    Read about our <a href="/projects">active projects here</a>
-                    and check out our <a href="/repos">repos of interest</a>.</p>
-                    <p class="lead">We invite you to read our <a href="https://github.com/things-nyc/things-nyc-docs/wiki" target=_blank>Wiki <i class="fa fa-external-link"></i></a> for more details.</p>
-                    <p class="lead">If you are interested in getting involved, please join our <a href="https://www.meetup.com/The-Things-Network-NYC-Community-Meetup/" target=_blank>Meetup Group <i class="fa fa-external-link"></i></a>.</p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-
-    <section class="callout">
-      <div class="container text-center">
-        <h2 class="mx-auto mb-5">Featured Project</h2>
-        <p class="lead">Using LoRaWAN with GPS, we aim map TTN coverage around Manhattan.</p>
-        <p><a class="btn btn-primary btn-xl" href="/2018/06/14/manhattan-mapper/">Manhattan Mapper <i class="fa fa-external-link"></i></a></p>
-      </div>
-    </section>
-
-    <!-- Support -->
-    <section id="support" class="brief">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                  <h2 class="text-primary text-center">Municipal Support for The Things Network</h2>
-                  <blockquote class="text-left">
-		    <p class="lead">"The Things Network lets independent municipal
-		    leaders like myself walk down a path that was
-		    previously unavailable to government, a third way
-		    between a municipal build out of a Wide Area
-		    Network and a massive franchise agreement with a
-		    private corporation. Together with The Things
-		    Network, government may now organize in concert
-		    with a diverse coalition of partners to create and
-		    enhance services at the local community level.</p>
-		    <p class="lead"> New York can lead by example, showing American
-                    technologists that there is more than one way to
-                    do an IoT rollout. They don’t need to be done from
-                    the top down, with a government franchise and
-                    loads of commoditized data."</p>
-		  </blockquote>
-		  <div class="text-right">
-                    - Former Manhattan Borough President Gale A Brewer
-		  </div>
-                </div>
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-
-    <section id="about" class="about">
-      <div class="container">
-        <div class="row">
-	  <div class="col text-center">
-	    <h2 class="text-primary">Get updates, follow, and interact!</h2>
-	  </div>
+<div class="my-5 p-5 text-white text-center rounded" id="header">
+  <div class="container">
+    <div class="row">
+      <div class="container header-title text-vertical-center mx-5 my-3">
+	<div class="col">
+          <h1>{{ page.title }}</h1>
 	</div>
-        <div class="row row-cols-4">
-          {% for link in site.data.links %}
-          <p class="col text-center">
-	    <a class="btn btn-primary" href="{{ link.url }}" target=_blank>{{ link.title }} <i class="fa fa-external-link"></i></a>
-	  </p>
-          {% endfor %}
-        </div>
-        <!-- /.row -->
-      </div>
-      <!-- /.container -->
-    </section>
-
-    <!-- Footer -->
-    <footer class="container">
-      <div class="row">
-        <div class="col col-sm-4 text-left">
-	  Contact the ThingsNYC Initiator:
-	  <br>
-	  Terry Moore &lt;<a href="mailto:terry@thethings.nyc">terry@thethings.nyc</a>&gt;
-	</div>
-        <div class="col col-sm-4 text-center">
-	  Title
-	  <a href="https://www.flickr.com/photos/88374602@N06/13118009065/" target=_blank>photo <i class="fa fa-external-link"></i></a>
-	  by
-	  <a href="https://www.flickr.com/photos/88374602@N06//" target=_blank>Bonnie Council <i class="fa fa-external-link"></i></a>
-	  <br>
-	  Used with permission.
-	</div>
-        <div class="col col-sm-4 text-right">
-	  Hosted by <a href="https://pages.github.com/" target=_blank>GitHub Pages <i class="fa fa-external-link"></i></a>
-	  <br>
-	  See the source of this page <a href="http://github.com/things-nyc/things-nyc.github.io" target=_blank>on GitHub <i class="fa fa-external-link"></i></a>.
+	<div class="col">
+          <p class="lead">
+	    A non-profit community supporting a free network for remote sensing for education, civic empowerment, and economic development in New York and around the world
+	  </h4>
 	</div>
       </div>
-    </footer>
+    </div>
+  </div>
+</div>
+
+<style>
+  .ttn-logo {
+      width: 75%;
+  }
+</style>
+
+<section class="mission">
+  <div class="container mx-5 mb-5">
+    <div class="row">
+      <div class="col-lg-4 text-center">
+        <img class="ttn-logo" src="/img/TTN-NewYork-logo-circle.png" />
+      </div>
+      <div class="col-lg-8 padding-top pt-10">
+	<h3>{{ page.title }}'s Mission</h3>
+	<div class="lead">
+	  <p>Our goal is to build a community of technical experts to support wider use of long-range public-access radio networking for remote sensing.</p>
+	  <p>We're doing this based on The Things Network, an international collaboration of community networks. The network is free to access, is based on open source software, and is owned and operated by its users.</p>
+	</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="learn">
+  <div class="container-fluid mx-5 mb-5 bg-secondary bg-opacity-25">
+    <div class="row">
+      <div class="col-lg-7 text-left">
+	<h3>Learn about {{ page.title }}</h3>
+	<div>
+	  <h4>The Things Network</h4>
+	  <p class="bg-warning">Add content about what The Things Network is with links</p>
+	  <p>Also see our <a href="/FAQ">FAQ.</a></p>
+	  <h4>The Things Network New York</h4>
+	  <p class="bg-warning">Mostly in NYC, with a sub-group in Ithaca area, with link</p>
+	  <h4>What we are doing</h4>
+	  <p>Read about our <a href="/projects">active projects</a> to see if there is one that piques your interest.  Also check out our <a href="/repos">repos</a>.
+            We also invite you to read our <a href="https://github.com/things-nyc/things-nyc-docs/wiki" target=_blank>Wiki <i class="fa fa-external-link"></i></a> for more details.</p>
+	  <h4>Getting involved</h4>
+	  <p>If you are interested in getting involved, please:
+	  Join our <a href="https://eepurl.com/ccBERT" target=_blank>Mailing List <i class="fa fa-external-link"></i></a>,
+          learn about our meetings via <a href="https://www.meetup.com/The-Things-Network-NYC-Community-Meetup/" target=_blank>Meetup Group <i class="fa fa-external-link"></i></a> to be notified about meetings,
+          and/or participate in discussions via <a href="https://things-nyc.slack.com/" target=_blank>Slack <i class="fa fa-external-link"></i></a></p>
+	  <p>You can contact the {{ page.title }} Initiator, Terry Moore &lt;<a href="mailto:terry@thethings.nyc">terry@thethings.nyc</a>&gt;</p>
+	  <p class="bg-warning">Add something about donating w/link</p>
+	</div>
+      </div>
+      <div class="col-lg-5 text-center">
+        <img class="ttn-logo pt-5" src="/img/nystate.png" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Support -->
+<style>
+  .manhattan-map {
+      width: 85%;
+  }
+</style>
+
+<section id="support" class="brief">
+  <div class="container mx-5 mb-5">
+    <div class="row">
+      <div class="col-lg-2">
+	<img class="manhattan-map" src="/img/port-auth-downtn-manhattan-airport-map-0.jpg" />
+      </div>
+      <div class="col-lg-10">
+	<h3 class="">Municipal Support for {{ page.title }}</h3>
+	<blockquote class="blockquote text-left">
+	  <p class="lead">"The Things Network lets independent municipal
+	    leaders like myself walk down a path that was
+	    previously unavailable to government, a third way
+	    between a municipal build out of a Wide Area
+	    Network and a massive franchise agreement with a
+	    private corporation. Together with The Things
+	    Network, government may now organize in concert
+	    with a diverse coalition of partners to create and
+	    enhance services at the local community level.</p>
+	  <p class="lead"> New York can lead by example, showing American
+            technologists that there is more than one way to
+            do an IoT rollout. They don’t need to be done from
+            the top down, with a government franchise and
+            loads of commoditized data."</p>
+	</blockquote>
+	<figcaption class="blockquote-footer">
+	  Former Manhattan Borough President <a href="https://en.wikipedia.org/wiki/Gale_Brewer" target=_blank>Gale A Brewer</a>
+	</figcaption>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="container-fluid mx-5 my-3">
+  <div class="row">
+    <div class="col col-sm-6 text-left">
+    </div>
+    <div class="col col-sm-6 text-right">
+    </div>
+  </div>
+</footer>
