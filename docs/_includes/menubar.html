@@ -5,7 +5,7 @@
 {% endif %}
 
 <div class="navbar sticky-top navbar-expand-sm navbar-dark">
-  <div class="container-fluid {{ nav_color }}">
+  <div class="container {{ nav_color }}">
     <a class="navbar-brand"
        {% if page.url != "/" %}
        href="/#top"
@@ -23,10 +23,6 @@
 
     <div class="collapse navbar-collapse" id="menubar">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-	<li class="nav-item">
-          <a class="nav-link"
-	     href="/#brief">Learn More</a>
-	</li>
 	<li class="nav-item">
           <a class="nav-link"
 	     href="/blog">Blog</a>
@@ -82,11 +78,15 @@
           <ul class="dropdown-menu {{ nav_color }}" aria-labelledby="navbarDropdownTTN">
 	    <li>
 	      <a class="dropdown-item"
-		 href="https://thethingsnetwork.org/">WebSite <i class="fa fa-external-link"></i></a>
+		 href="https://console.cloud.thethings.network/">Console <i class="fa fa-external-link"></i></a>
 	    </li>
 	    <li>
 	      <a class="dropdown-item"
 		 href="https://forum.thethingsnetwork.org/">Forum <i class="fa fa-external-link"></i></a>
+	    </li>
+	    <li>
+	      <a class="dropdown-item"
+		 href="https://thethingsnetwork.org/">WebSite <i class="fa fa-external-link"></i></a>
 	    </li>
 	  </ul>
 	</li>
