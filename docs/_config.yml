@@ -4,7 +4,7 @@ timezone: America/New_York
 collections:
   posts:
     output: true
-remote_theme: BlackrockDigital/startbootstrap-stylish-portfolio
+#remote_theme: BlackrockDigital/startbootstrap-stylish-portfolio
 repository: things-nyc/things-nyc.github.io
 permalink: pretty
 defaults:
