@@ -1,0 +1,42 @@
+---
+layout: default
+title: Things Network NY Stories
+---
+<section class="content-section container" id="stories">
+  <div class="container text-primary text-center">
+    <h2>{{ page.title }}</h2>
+  </div>
+
+  {% for story in site.stories %}
+  <div class="story" markdown="0">
+    <div class="card my-3">
+      <h2 class="card-header text-left">
+	<a class="card-title" href="{{ story.url }}" target=_blank>{{ story.title }}</a>
+	by
+	<a href={{ site.data.people[story.author].profile }}>{{ site.data.people[story.author].name }}</a>
+      </h2>
+      <div class="card-body">
+	<p class="lead">{{ story.excerpt }}</p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+<script>
+function setVisibility(name, vis) {
+  [].forEach.call(document.getElementsByClassName(name), function (el) {
+    el.style.display = vis;
+  });
+}
+function hideAll() { setVisibility("story", "none") }
+function showAll() { setVisibility("story", "unset") }
+function showClass(tag) {
+  hideAll();
+  setVisibility(tag, "unset");
+}
+document.getElementById("show-all").addEventListener("click",showAll,false);
+{% for tag_entry in site.tags %}
+document.getElementById("show-{{ tag_entry[0] }}").addEventListener("click",function(e) { showClass("tag-{{ tag_entry[0] }}"); }, false);
+{% endfor %}
+</script>
