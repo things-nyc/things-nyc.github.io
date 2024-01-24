@@ -22,9 +22,9 @@ title: ThingsNY Repositories of Interest
 
     <div class="container-fluid">
       <div class="filter-box justify-content-sm-center mb-4">
-	<div class="btn btn-primary text-center" id="show-all">All</div>
+	<button class="btn btn-primary text-center" id="show-all">All</button>
 	{% for topic in topics %}
-	<div class="btn btn-primary text-center" id="show-{{ topic }}">{{ topic }}</div>
+	<button class="btn btn-primary text-center" id="show-{{ topic }}">{{ topic }}</button>
 	{% endfor %}
       </div>
     </div>
