@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<section class="content-section" id="blog">
+  <div class="row m-5">
+    <div class="col text-center">
+      <h1>{{ page.title }}</h1>
+      <h3>by <a href={{ site.data.people[page.author].profile }}>{{ site.data.people[page.author].name }}</a></h3>
+    </div>
+  </div>
+  <div class="row m-5">
+    <div class="col justify-content-md-center bg-body">
+      {{ content }}
+    </div>
+  </div>
+</section>
+{% include share.html %}
