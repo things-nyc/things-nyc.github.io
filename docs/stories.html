@@ -10,13 +10,11 @@ title: Things Network NY Stories
   {% for story in site.stories %}
   <div class="story" markdown="0">
     <div class="card my-3">
-      <h2 class="card-header text-left">
-	<a class="card-title" href="{{ story.url }}" target=_blank>{{ story.title }}</a>
-	by
-	<a href={{ site.data.people[story.author].profile }}>{{ site.data.people[story.author].name }}</a>
-      </h2>
       <div class="card-body">
-	<p class="lead">{{ story.excerpt }}</p>
+	<h5 class="card-title">{{ story.title }}</h5>
+	<h6 class="card-subtitle">-- <a href={{ site.data.people[story.author].profile }}>{{ site.data.people[story.author].name }}</a></h6>
+	<p class="card-text">{{ story.excerpt }}</p>
+	<a class="card-link" href="{{ story.url }}" target=_blank>Read more ...</a>
       </div>
     </div>
   </div>
