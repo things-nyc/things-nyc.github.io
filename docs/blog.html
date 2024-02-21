@@ -19,13 +19,12 @@ title: Things NY Blog
   {% for post in site.posts %}
   <div class="post{% for tag in post.tags %} tag-{{ tag }}{% endfor %}" markdown="1">
     <div class="card my-3">
-      <h2 class="card-header text-left">
-	<a class="card-title" href="{{ post.url }}" target=_blank>{{ post.title }}</a>
-	by
-	<a href={{ site.data.people[post.author].profile }}>{{ site.data.people[post.author].name }}</a>
-      </h2>
       <div class="card-body">
-	<p class="lead">{{ post.excerpt }}</p>
+	<h4 class="card-title">{{ post.title }}</h4>
+	<h6 class="card-subtitle">-- <a href={{ site.data.people[post.author].profile }}>{{ site.data.people[post.author].name }}</a></h6>
+	<p class="card-text">{{ post.excerpt }}</p>
+	<a class="card-link" href="{{ post.url }}" target=_blank>Read more ...</a>
+	<br class="py-3">
 	<label class="text-primary">Tags:</label> {{ post.tags | join: ", " }}
       </div>
     </div>
