@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+:root {
+  --text: #111827; /* slate-900 */
+  --muted: #6b7280; /* slate-500 */
+  --border: #e5e7eb; /* slate-200 */
+  --bg: #ffffff;
+  --primary: #111827;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+  background: var(--bg);
+}
+
+@layer components {
+  .prose p {
+    margin-top: 1.5em; /* increase top space */
+    margin-bottom: 1.5em; /* increase bottom space */
+  }
+}
+
+.app-root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  flex: 1 0 auto;
+}
+
+/* Hero */
+.hero {
+  padding: 56px 0 24px;
+}
+.hero-title {
+  font-size: clamp(28px, 6vw, 42px);
+  line-height: 1.1;
+  margin: 0 0 12px;
+  font-weight: 700;
+}
+.hero-subtitle {
+  font-size: clamp(16px, 2.4vw, 20px);
+  color: var(--muted);
+  max-width: 48ch;
+  margin: 0 0 24px;
+}
+.hero-cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid var(--border);
+}
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+.btn-outline {
+  background: white;
+  color: var(--text);
+}
+.btn:hover {
+  transform: translateY(-1px);
+  transition: transform 120ms;
+}
