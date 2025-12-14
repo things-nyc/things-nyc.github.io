@@ -4,4 +4,7 @@
 .DS_Store
 _dl/
 docs/_site/
-
+node_modules
+docs/.vite
+dist
+.env
