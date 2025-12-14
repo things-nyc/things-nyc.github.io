@@ -39,7 +39,7 @@ export default function Header() {
           <NavLink to="/minutes" className={navLink}>
             Minutes
           </NavLink>
-          <NavLink to="/stories" className={navLink}>
+          <NavLink to="/people" className={navLink}>
             People
           </NavLink>
         </nav>
