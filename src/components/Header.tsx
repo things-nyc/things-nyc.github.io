@@ -39,9 +39,9 @@ export default function Header() {
           <NavLink to="/minutes" className={navLink}>
             Minutes
           </NavLink>
-          <a className={navLink} href="#">
+          <NavLink to="/stories" className={navLink}>
             People
-          </a>
+          </NavLink>
         </nav>
       </div>
     </header>
