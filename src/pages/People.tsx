@@ -1,26 +1,27 @@
 type TeamMember = {
   name: string;
   profileUrl?: string;
+  imageUrl?: string;
 };
 
 export default function People() {
   const teamMembers: TeamMember[] = [
-    { name: "Forrest Filler", profileUrl: "https://github.com/forrestfiller" },
-    { name: "Eliott Highfill", profileUrl: "https://github.com/highfile" },
-    { name: "Terry Moore", profileUrl: "https://github.com/terrillmoore" },
+    { name: "Forrest Filler", profileUrl: "https://github.com/forrestfiller", imageUrl: "https://avatars.githubusercontent.com/u/18606441?v=4" },
+    { name: "Eliott Highfill", profileUrl: "https://github.com/highfile", imageUrl: "https://avatars.githubusercontent.com/u/18274388?v=4" },
+    { name: "Terry Moore", profileUrl: "https://github.com/terrillmoore", imageUrl: "https://avatars.githubusercontent.com/u/19333103?v=4" },
     {
       name: "Shubham Arya",
-      profileUrl: "https://www.shubhamarya.com/?source=ttnyc",
+      profileUrl: "https://www.shubhamarya.com/?source=ttnyc", imageUrl: "https://avatars.githubusercontent.com/u/17561119?v=4"
+      
     },
-    { name: "Jeff Honig", profileUrl: "https://github.com/jchonig" },
-    { name: "Chris Merck", profileUrl: "https://github.com/chrismerck" },
-    { name: "Mimi Flynn", profileUrl: "https://github.com/mimiflynn" },
-    { name: "Frank Leon Rose", profileUrl: "https://github.com/frankleonrose" },
-    { name: "Chris Stratton", profileUrl: "https://github.com/cstratton" },
+    { name: "Jeff Honig", profileUrl: "https://github.com/jchonig", imageUrl: "https://avatars.githubusercontent.com/u/4303886?v=4" },
+    { name: "Chris Merck", profileUrl: "https://github.com/chrismerck", imageUrl: "https://avatars.githubusercontent.com/u/628921?v=4" },
+    { name: "Mimi Flynn", profileUrl: "https://github.com/mimiflynn", imageUrl: "https://avatars.githubusercontent.com/u/414934?v=4" },
+    { name: "Frank Leon Rose", profileUrl: "https://github.com/frankleonrose", imageUrl: "https://avatars.githubusercontent.com/u/1261725?v=4" },
+    { name: "Chris Stratton", profileUrl: "https://github.com/cstratton", imageUrl: "https://avatars.githubusercontent.com/u/1143408?v=4" },
     {
       name: "Jon Bosak",
-      profileUrl: "https://en.wikipedia.org/wiki/Jon_Bosak",
-    },
+      profileUrl: "https://en.wikipedia.org/wiki/Jon_Bosak", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Jon_Bosak.jpg/500px-Jon_Bosak.jpg"},
     { name: "Brian Vant-Hull" },
   ];
 
@@ -60,25 +61,33 @@ export default function People() {
         {teamMembers.map((teamMember, index) => (
           <div
             key={teamMember.name}
-            className="group relative rounded-xl border border-slate-200 bg-white p-6 hover:shadow-lg hover:border-slate-300 transition-all motion-safe:duration-300 overflow-hidden"
+            className="group relative rounded-xl border border-slate-200 bg-white p-6 hover:shadow-lg hover:border-blue-200 hover:ring-1 hover:ring-blue-200 hover:scale-[1.02] transition-all motion-safe:duration-300 overflow-hidden"
           >
             {/* Subtle gradient overlay on hover */}
             <div className="absolute inset-0 bg-gradient-to-br from-slate-50/0 via-blue-50/0 to-indigo-50/0 group-hover:from-slate-50/50 group-hover:via-blue-50/30 group-hover:to-indigo-50/20 transition-all duration-300 -z-0 rounded-xl" />
 
             <div className="relative z-10">
               <div className="flex items-start gap-4 mb-4">
-                {/* Avatar with gradient */}
-                <div
-                  className={`flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br ${
-                    avatarGradients[index % avatarGradients.length]
-                  } flex items-center justify-center text-slate-700 font-semibold text-lg shadow-sm group-hover:shadow-md transition-shadow duration-300`}
-                >
-                  {teamMember.name
-                    .split(" ")
-                    .map((n) => n.charAt(0))
-                    .join("")
-                    .toUpperCase()}
-                </div>
+                {/* Avatar with gradient or image */}
+                {teamMember.imageUrl ? (
+                  <img
+                    src={teamMember.imageUrl}
+                    alt={teamMember.name}
+                    className="flex-shrink-0 w-12 h-12 rounded-full object-cover shadow-sm group-hover:shadow-md transition-shadow duration-300"
+                  />
+                ) : (
+                  <div
+                    className={`flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br ${
+                      avatarGradients[index % avatarGradients.length]
+                    } flex items-center justify-center text-slate-700 font-semibold text-lg shadow-sm group-hover:shadow-md transition-shadow duration-300`}
+                  >
+                    {teamMember.name
+                      .split(" ")
+                      .map((n) => n.charAt(0))
+                      .join("")
+                      .toUpperCase()}
+                  </div>
+                )}
                 <div className="flex-1 min-w-0">
                   <h3 className="text-lg font-semibold text-slate-900 group-hover:text-slate-800 transition-colors">
                     {teamMember.name}
