@@ -5,6 +5,17 @@ import ProjectsRail from "./ProjectRail";
 import Testimonial from "./Testimonial";
 
 export default function Home() {
+  const handleGetInvolvedClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const element = document.getElementById('get-involved');
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <>
       <section className="mx-auto max-w-7xl px-4 py-16">
@@ -25,12 +36,12 @@ export default function Home() {
           >
             How does it work?
           </a>
-          <a
-            href="#"
+          <button
+            onClick={handleGetInvolvedClick}
             className="inline-block px-4 py-2 rounded-md border border-slate-200 font-semibold hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-black/20"
           >
             Get Involved
-          </a>
+          </button>
         </div>
       </section>
       {/* mission */}

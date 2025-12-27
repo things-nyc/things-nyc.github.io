@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.12",
+    "@uiw/react-md-editor": "^4.0.11",
+    "firebase": "^12.7.0",
     "front-matter": "^4.0.2",
     "lottie-react": "^2.4.1",
     "react": "^19.1.1",

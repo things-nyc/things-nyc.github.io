@@ -27,21 +27,21 @@ export default function Header() {
           <NavLink to="/stories" className={navLink}>
             Stories
           </NavLink>
-          <a className={navLink} href="#">
-            Projects
-          </a>
-          <a className={navLink} href="#">
+          <NavLink to="/repos" className={navLink}>
+            Repos
+          </NavLink>
+          <NavLink to="/blog" className={navLink}>
             Blog
-          </a>
-          <a className={navLink} href="#">
-            Get Involved
-          </a>
-          <NavLink to="/minutes" className={navLink}>
-            Minutes
           </NavLink>
           <NavLink to="/people" className={navLink}>
             People
           </NavLink>
+          <NavLink to="/faq" className={navLink}>
+            FAQs
+          </NavLink>
+          <a href="https://the-things-network-new-york-inc.square.site/" target="_blank" rel="noopener noreferrer" className={navLink}>
+            Donate
+          </a>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -86,33 +86,19 @@ export default function Header() {
             >
               Stories
             </NavLink>
-            <a
+            <NavLink
+              to="/repos"
               className={`${navLink} block py-2`}
-              href="#"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Projects
-            </a>
-            <a
+              Repos
+            </NavLink>
+            <NavLink
+              to="/blog"
               className={`${navLink} block py-2`}
-              href="#"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Blog
-            </a>
-            <a
-              className={`${navLink} block py-2`}
-              href="#"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Get Involved
-            </a>
-            <NavLink
-              to="/minutes"
-              className={`${navLink} block py-2`}
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Minutes
             </NavLink>
             <NavLink
               to="/people"
@@ -121,6 +107,22 @@ export default function Header() {
             >
               People
             </NavLink>
+            <NavLink
+              to="/faq"
+              className={`${navLink} block py-2`}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              FAQs
+            </NavLink>
+            <a
+              href="https://the-things-network-new-york-inc.square.site/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${navLink} block py-2`}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Donate
+            </a>
           </nav>
         </div>
       )}

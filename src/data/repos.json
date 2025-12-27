@@ -1,0 +1,113 @@
+[
+  {
+    "url": "https://github.com/mcci-catena/arduino-lmic",
+    "desc": "Arduino library implementing LoRaWAN network stack. Directly operates Semtech SX127x radio chips.",
+    "tags": ["Arduino", "Library"]
+  },
+  {
+    "url": "https://github.com/mcci-catena/arduino-lorawan",
+    "desc": "C++ wrapper with nicer APIs for arduino-lmic. Really just a fancy shim, but it centralizes a number of ugly details.",
+    "tags": ["Arduino", "Library"]
+  },
+  {
+    "url": "https://github.com/TheThingsNetwork/arduino-device-lib",
+    "desc": "Arduino Library for TTN Devices using the RN2483 radio.",
+    "tags": ["Arduino", "Data", "Library"]
+  },
+  {
+    "url": "https://github.com/frankleonrose/LoraStack",
+    "desc": "A library that implements the 'arduino-device-lib' high level API, but down below uses LMiC for direct control of SX127x radios. Uses PlatformIO to standardize and simplify dependency management.",
+    "tags": ["Arduino", "PlatformIO", "Library"]
+  },
+    {
+        "url": "https://github.com/things-nyc/ttn-post-adapter",
+        "desc": "Serverless adapter to connect TTN to cloud databases",
+        "tags": ["Server", "Data"]
+    },
+        {
+        "url": "https://github.com/things-nyc/mapthethings-arduino",
+        "desc": "The Arduino portion of The Things Network New York's Map The Things app.",
+        "tags": ["Mapping", "Node", "PlatformIO"]
+    },    {
+        "url": "https://github.com/frankleonrose/TemperatureThing",
+        "desc": "Arduino code for a basic temperature monitoring node. Runs on an Adafruit Feather LoRa and expects to communicate via SPI with FRAM chip to store LoRaWAN operational parameters.",
+        "tags": ["Node", "PlatformIO"]
+    },    {
+        "url": "https://github.com/frankleonrose/ManhattanMapper",
+        "desc": "Car-based coverage mapping node for New York City",
+        "tags": ["Mapping", "Node", "PlatformIO"]
+    },    {
+        "url": "https://github.com/things-nyc/heat-seek-feather-m0-lora",
+        "desc": "Heat Seek temperature sensor connected to a Adafruit Feather M0 LoRa RF95",
+        "tags": ["Node"]
+    },    {
+        "url": "https://github.com/things-nyc/loramote_sigmap",
+        "desc": "Microchip LoRaMOTE Firmware for Signal Mapping",
+        "tags": ["Mapping", "Node"]
+    },    {
+        "url": "https://github.com/things-nyc/mapthethings-ios",
+        "desc": "iOS client for collecting MapTheThings data",
+        "tags": ["Mapping", "App"]
+    },    {
+        "url": "https://github.com/things-nyc/mapthethings-server",
+        "desc": "Global coverage map for The Things Network",
+        "tags": ["Server", "Mapping"]
+    },    {
+        "url": "https://github.com/things-nyc/multitech-installer",
+        "desc": "Installer for TheThingsNetwork on MultiTech Conduit",
+        "tags": ["Gateway"]
+    },    {
+        "url": "https://github.com/IthacaThings/ttn-multitech-cm",
+        "desc": "A system supporting the deployment, monitoring, and maintenance of a fleet of Multi-Tech Conduit and Conduit AP gateways. As part of deploying hundreds of gateways to cover NYC and Ithaca regions of New York State, the group manages these gateways as a service to gateway owners. The system uses the Ansible Configuration Management tool to drive gateway configuration, an SSH jumphost to enable secure remote access.",
+        "tags": ["Gateway"]
+    },    {
+        "url": "https://github.com/IthacaThings/meta-ttni",
+        "desc": "A Yocto layer to build mLinux images for Multi-Tech Conduit and Conduit AP gateways pre-configured for management with ttn-multitech-cm.",
+        "tags": ["Gateway"]
+    },    {
+        "url": "https://github.com/jchonig/docker-meetup-slack",
+        "desc": "A python script that posts reminders about Meetup meetings to Slack channels. Used by thingsnyc and ttni (TTN Ithaca).",
+        "tags": ["Slack", "Meetup"]
+    },    {
+        "url": "https://github.com/things-nyc/aep_to_ttn_mlinux",
+        "desc": "Automatically commission and setup SSH on MultiTech Conduit running AEP",
+        "tags": []
+    },    {
+        "url": "https://github.com/things-nyc/bridge",
+        "desc": "Python script for bridging Class C Microchip to serial",
+        "tags": []
+    },    {
+        "url": "https://github.com/things-nyc/conduit_ip68_case",
+        "desc": "Build to adapt Multitech Conduit (MTCDT/blue box) gateways for outdoor use",
+        "tags": []
+    },    {
+        "url": "https://github.com/things-nyc/docker-iot-dashboard",
+        "desc": "A complete IoT server for LoRaWAN IoT projects: node-red + influxdb + grafana + ssl + let's encrypt using docker-compose.",
+        "tags": []
+    },
+    {
+        "url": "https://github.com/things-nyc/lora-pi-hat",
+        "desc": "Raspberry Pi HAT for mPCIe LoRa gateway cards",
+        "tags": []
+    },
+    {
+        "url": "https://github.com/things-nyc/LowPowerLoRaBoards",
+        "desc": "Reference code for using low power states of LoRa boards.",
+        "tags": []
+    },
+    {
+        "url": "https://github.com/things-nyc/lwom",
+        "desc": "LoRaWAN over Meshtastic",
+        "tags": []
+    },
+    {
+        "url": "https://github.com/things-nyc/nyc-duino",
+        "desc": "A simple demo board for the TTN NYC Hardware Office Hours!",
+        "tags": []
+    },
+    {
+        "url": "https://github.com/things-nyc/ttn_mass_provision",
+        "desc": "Scan a set of gateways and prime the TTN NY provisioning system",
+        "tags": []
+    }
+]
