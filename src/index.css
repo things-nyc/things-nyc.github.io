@@ -8,8 +8,8 @@
   --primary: #111827;
 }
 
-* {
-  box-sizing: border-box;
+html {
+  scroll-behavior: smooth;
 }
 html,
 body,

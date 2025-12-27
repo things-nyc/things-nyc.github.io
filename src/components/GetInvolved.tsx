@@ -19,7 +19,7 @@ export default function GetInvolved({
   contactEmail,
 }: Props) {
   return (
-    <section className="mx-auto max-w-7xl px-4 py-16">
+    <section id="get-involved" className="mx-auto max-w-7xl px-4 py-16">
       {/* header */}
       <div className="text-center max-w-3xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-semibold">Get involved</h2>
@@ -85,7 +85,7 @@ export default function GetInvolved({
               className="w-64 h-64 md:w-80 md:h-80"
             />
           </div>
-          <h3 className="mt-3 text-lg font-semibold">Join the Slack</h3>
+          <h3 className="mt-3 text-lg font-semibold">Join our Slack</h3>
           <p className="mt-1 text-sm text-slate-700">
             Chat with volunteers, get help, and pair up on projects.
           </p>
