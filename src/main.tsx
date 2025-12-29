@@ -10,6 +10,12 @@ import Blog from "./pages/Blog.tsx";
 import People from "./pages/People.tsx";
 import Faq from "./pages/faq.tsx";
 import Repos from "./pages/Repos.tsx";
+import mixpanel from "mixpanel-browser";
+
+mixpanel.init('46e26c9c3c1239c1ccab3395c3c0ef6e', {
+  autocapture: true,
+  record_sessions_percent: 100,
+})
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
