@@ -1,11 +1,28 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { teardowns, teardownImage, latestDate } from "../data/teardowns";
 import Lightbox from "../components/Lightbox";
+
+// Optional long-form notes per device, keyed by slug.
+const noteFiles = import.meta.glob("../content/teardowns/*.md", {
+  query: "?raw",
+  import: "default",
+});
 
 export default function TeardownDetail() {
   const { slug } = useParams<{ slug: string }>();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [notes, setNotes] = useState<string>("");
+
+  useEffect(() => {
+    setNotes("");
+    const loader = (noteFiles as Record<string, () => Promise<string>>)[
+      `../content/teardowns/${slug}.md`
+    ];
+    if (loader) loader().then(setNotes).catch(() => setNotes(""));
+  }, [slug]);
 
   const teardown = teardowns.find((t) => t.slug === slug);
 
@@ -58,6 +75,11 @@ export default function TeardownDetail() {
         </div>
         {teardown.description && (
           <p className="mt-4 text-slate-700">{teardown.description}</p>
+        )}
+        {notes && (
+          <div className="prose prose-slate max-w-none mt-6">
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{notes}</ReactMarkdown>
+          </div>
         )}
       </header>
 
