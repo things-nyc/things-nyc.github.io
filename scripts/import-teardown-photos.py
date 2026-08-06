@@ -18,8 +18,15 @@ It then writes src/data/teardowns.json, one entry per device, photos sorted
 by EXIF capture date. Re-running merges: titles, descriptions, and captions
 already in the JSON are kept, so hand-edited text survives new photo batches.
 
+Without --merge, each device's photo list is rebuilt from the source
+directory, so the source must hold the complete set for that device. With
+--merge, the source only needs the photos to add or replace: entries for
+photos the source doesn't contain stay in the JSON, so a single replacement
+shot can be imported without the full collection on hand.
+
 Usage:
   uv run scripts/import-teardown-photos.py "/mnt/c/tmp/LoRaWan Gateways"
+  uv run scripts/import-teardown-photos.py --merge ~/new-photos
 """
 
 import argparse
@@ -101,13 +108,13 @@ def load_existing() -> dict[str, dict]:
     return {entry["slug"]: entry for entry in json.loads(DATA_FILE.read_text())}
 
 
-def import_device(source_dir: Path, existing: dict | None) -> dict:
+def import_device(source_dir: Path, existing: dict | None, merge: bool) -> dict:
     slug = slugify(source_dir.name)
-    old_captions = {}
+    old_photos = {}
     if existing:
-        old_captions = {p["file"]: p.get("caption", "") for p in existing["photos"]}
+        old_photos = {p["file"]: p for p in existing["photos"]}
 
-    photos = []
+    imported = {}
     for src in sorted(source_dir.iterdir()):
         if src.suffix.lower() not in JPEG_EXTENSIONS:
             continue
@@ -126,13 +133,18 @@ def import_device(source_dir: Path, existing: dict | None) -> dict:
         display = save_resized(oriented, DISPLAY_LONG_EDGE, 80, display_dir / name)
         save_resized(oriented, THUMB_LONG_EDGE, 75, thumb_dir / name)
 
-        photos.append({
+        imported[name] = {
             "file": name,
             "date": exif_date(piexif.load(source_bytes)),
             "width": display.width,
             "height": display.height,
-            "caption": old_captions.get(name, ""),
-        })
+            "caption": old_photos.get(name, {}).get("caption", ""),
+        }
+
+    if merge:
+        for name, photo in old_photos.items():
+            imported.setdefault(name, photo)
+    photos = [imported[name] for name in sorted(imported)]
 
     # A photo without an EXIF date takes the date of its neighbor in
     # filename order, so it sorts with the batch it belongs to.
@@ -154,6 +166,12 @@ def import_device(source_dir: Path, existing: dict | None) -> dict:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("source", type=Path, help="directory of device subdirectories")
+    parser.add_argument(
+        "--merge",
+        action="store_true",
+        help="add or replace only the photos present in the source directory; "
+        "keep JSON entries for photos the source doesn't contain",
+    )
     args = parser.parse_args()
 
     if not args.source.is_dir():
@@ -162,7 +180,7 @@ def main() -> int:
     existing = load_existing()
     entries = []
     for device_dir in sorted(p for p in args.source.iterdir() if p.is_dir()):
-        entry = import_device(device_dir, existing.get(slugify(device_dir.name)))
+        entry = import_device(device_dir, existing.get(slugify(device_dir.name)), args.merge)
         entries.append(entry)
         print(f"{entry['slug']}: {len(entry['photos'])} photos")
 
