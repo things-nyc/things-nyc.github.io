@@ -10,6 +10,8 @@ import Blog from "./pages/Blog.tsx";
 import People from "./pages/People.tsx";
 import Faq from "./pages/faq.tsx";
 import Repos from "./pages/Repos.tsx";
+import Teardowns from "./pages/Teardowns.tsx";
+import TeardownDetail from "./pages/TeardownDetail.tsx";
 import mixpanel from "mixpanel-browser";
 
 mixpanel.init('46e26c9c3c1239c1ccab3395c3c0ef6e', {
@@ -25,6 +27,8 @@ createRoot(document.getElementById("root")!).render(
           <Route path="/" element={<Home />} />
           <Route path="/stories" element={<Stories />} />
           <Route path="/stories/:slug" element={<StoryDetail />} />
+          <Route path="/teardowns" element={<Teardowns />} />
+          <Route path="/teardowns/:slug" element={<TeardownDetail />} />
           <Route path="/repos" element={<Repos />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/people" element={<People />} />

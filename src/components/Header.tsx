@@ -27,6 +27,9 @@ export default function Header() {
           <NavLink to="/stories" className={navLink}>
             Stories
           </NavLink>
+          <NavLink to="/teardowns" className={navLink}>
+            Teardowns
+          </NavLink>
           <NavLink to="/repos" className={navLink}>
             Repos
           </NavLink>
@@ -85,6 +88,13 @@ export default function Header() {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Stories
+            </NavLink>
+            <NavLink
+              to="/teardowns"
+              className={`${navLink} block py-2`}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Teardowns
             </NavLink>
             <NavLink
               to="/repos"
