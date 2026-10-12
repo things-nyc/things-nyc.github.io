@@ -38,4 +38,15 @@ Analytics: Mixpanel is initialized in `src/main.tsx` with autocapture and sessio
 
 Images and videos go in `public/images/` and `public/videos/`; data files reference them with paths relative to the site root (e.g. `images/stories/foo.jpg`, no leading slash, since the app is served with `base: "/"` under a hash router).
 
-To add a story: add an entry to `src/data/stories.ts`, put the cover image in `public/images/stories/`, and (optionally) add a markdown file in `src/content/stories/` and set `mdPath` to its `src/...` path.
+To add a story: add an entry to `src/data/stories.ts`, put the cover image in `public/images/stories/`, and (optionally) add a markdown file in `src/content/stories/` and set `mdPath` to its `src/...` path. Draft entries for planned stories are in `notes/success-stories.md`.
+
+## Outside links
+
+- **Donate**: both Donate links in `src/components/Header.tsx` (desktop nav and mobile menu) point to the TTN NY Zeffy donation form. Use only TTN NY's own form, never the Zeffy page for WestLight, the fiscal-sponsorship client.
+- **Mailing list**: the Subscribe button (`src/components/GetInvolved.tsx`, URL passed from `src/components/Home.tsx`) opens Mailchimp's hosted signup form. The audience uses double opt-in, and the old embedded form was deleted after it filled the list with bot signups. A move of the list to Zeffy is planned; that move replaces this link.
+
+## Notes and drafts
+
+`doc/posts/` holds social-media text drafted for hand posting (Mastodon, Meetup, Slack), one file per announcement, named `<date>-<slug>.md`. `notes/` holds planning notes. Neither directory is part of the build.
+
+This repo is public. Commit only what could appear on the website. People's names taken from Slack, private correspondence, money details from private mail, open questions, and local paths go in a working file outside git; see local memory for where that file lives on this machine.
