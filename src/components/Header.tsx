@@ -42,7 +42,7 @@ export default function Header() {
           <NavLink to="/faq" className={navLink}>
             FAQs
           </NavLink>
-          <a href="https://the-things-network-new-york-inc.square.site/" target="_blank" rel="noopener noreferrer" className={navLink}>
+          <a href="https://www.zeffy.com/en-US/donation-form/donate-to-the-things-network-new-york" target="_blank" rel="noopener noreferrer" className={navLink}>
             Donate
           </a>
         </nav>
@@ -125,7 +125,7 @@ export default function Header() {
               FAQs
             </NavLink>
             <a
-              href="https://the-things-network-new-york-inc.square.site/"
+              href="https://www.zeffy.com/en-US/donation-form/donate-to-the-things-network-new-york"
               target="_blank"
               rel="noopener noreferrer"
               className={`${navLink} block py-2`}

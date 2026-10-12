@@ -64,13 +64,12 @@ export const activeProjects: Project[] = [
     title: "Organization, Presence, and Funding",
     projectType: "Organization",
     summary:
-      "TTN-NY as an organization needs legal structure, accounting, and governance. It also needs to be present on the Web and social media in order to be found by people looking for LoraWAN support in NYC. We recently completed official registration as a 501(c)3, meaning that now we can accept tax deductable donations.",
+      "TTN-NY as an organization needs legal structure, accounting, and governance. It also needs to be present on the Web and social media in order to be found by people looking for LoraWAN support in NYC. We recently completed official registration as a 501(c)3, meaning that now we can accept tax-deductible donations.",
     status: "Ongoing",
     imageUrl: "images/projects/organization.jpg",
     lead: "Terry Moore",
     nextSteps: [
       "Add more project documentation on the website.",
-      "Enable donations by engaging a fiscal sponsor.",
       "Meeting minutes and newsletter on website.",
     ],
     links: {
