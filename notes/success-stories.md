@@ -34,3 +34,14 @@ Candidates for `src/data/stories.ts`. The field names match the `Story` type.
 - **metrics:** 3 schools; 200+ students trained (WestLight's report); Phase 2 target 30 schools, over 10,000 students
 - **dates:** Starlink installed July 2026; classes began July 12, 2026
 - **links.external:** https://www.westlightsolarkenya.com/
+
+## 4. GLOwanus (Van Alen Institute, Brooklyn)
+
+- **slug:** `glowanus`
+- **title (draft):** Helping build GLOwanus lanterns for the Gowanus Canal
+- **summary (draft):** GLOwanus is a public-art lantern from the Van Alen Institute that changes color when the Gowanus Canal is under a city water advisory, so neighbors know to use less water during storms. On September 16, 2023, TTN NY volunteers joined an assembly session at Van Alen in Brooklyn to help build the units.
+- **tags:** Community, Environment, Art
+- **partners:** Van Alen Institute (Neighborhood Design Fellowship); designers Manav Singla and Ridima Jain
+- **dates:** assembly session 2023-09-16
+- **links.external:** https://www.vanalen.org/project/glowanus/
+- **image:** photo of the 2023-09-16 assembly session (used in the fall 2026 Mastodon post)
